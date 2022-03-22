@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.md</p>
+<p>=== Claves de las incidencias de la venta</p>
+<p>La pantalla permite codificar las incidencias relacionadas con el documento de la venta.</p>
+<p>Algunas incidencias se producen como consequencia de otros procesos como <strong>Rechazo</strong> o <strong>Anulación</strong>.
+Las incidencias tipo <strong>Generica</strong> se pueden agregar manualmente en el documento de venta.</p>
+<p>En todos los procesos el usuario puede hacer un comentario ademas de indicar la clave.</p>
+<p>== Campos de las claves para tener en cuenta</p>
+<ul class="simple">
+<li><p><strong>Referencia del fabricante</strong> es una codificacion de la incidencia para el proveedor/fabricante.
+Esto se utiliza para indicar razones de anulacion en las transmisiones de proveedores.
+Hay que indicar el proveedor.</p></li>
+<li><p><strong>Proveedor</strong> indica que la incidencia se aplica a los documentos de intermediación.
+Si no se ha indicado ningun proveedor la clave se aplica para todos los documentos sin intermediacion
+e intermediaciones de los proveedores que no tengan definidas las claves.</p></li>
+<li><p><strong>Tipo</strong> indica el proceso en cual se utiliza la incidencia.
+Solo deberia existir una clave de tipo <strong>Rechazo</strong>. Tiene que existir al menos una clave de <strong>Anulación</strong>.</p></li>
+<li><p><strong>Accion</strong> se aplica despues de anulación.</p></li>
+</ul>
+<p>= Acciones</p>
+<p>Las acciones se aplican despues de la anulación del documento.</p>
+<ul class="simple">
+<li><p><strong>Ninguna</strong> es la opción por defecto. El documento queda anulado.</p></li>
+<li><p><strong>Duplicar</strong> creara un nuevo documento con el mismo contenido.</p></li>
+<li><p><strong>Repetir</strong> marca la repeticion del documento para la transmision por el portal CCIP.
+Esta opción solo hay que utilizarla junto con el proveedor CocaCola</p></li>
+</ul>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

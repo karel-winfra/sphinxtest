@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Búsquedas &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="prev" title="Disposición de las pantallas" href="pantalla.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="busquedas">
+<h1>Búsquedas<a class="headerlink" href="#busquedas" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><img alt="" src="../../_images/busqueda.png" /></p>
+<section id="busqueda-de-texto-y-codigos">
+<h2>Búsqueda de texto y códigos<a class="headerlink" href="#busqueda-de-texto-y-codigos" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Cada búsqueda define que busca sin utilizar ningún parámetro.</p></li>
+<li><p>En caso de texto busca su cualquier ocurrencia. Para buscar valor exacto incluye el texto entre comillas dobles <strong>«</strong>.
+Puede utilizar el comodín * (asterisco) dentro de las comillas.</p></li>
+<li><p>En caso de código busca el valor exacto.</p></li>
+<li><p>Para evitar la búsqueda exacta del código utilice comodín * (asterisco)</p></li>
+<li><p>La búsqueda no distingue mayúsculas y minúsculas, pero sí distingue los acentos.</p></li>
+</ul>
+<p>Ejemplo de la búsqueda de clientes. Búsqueda de clientes busca por defecto el código o descripción de cliente:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hotel
+</pre></div>
+</div>
+<p>encuentra todos los hoteles (por su descripción)</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bar juan
+</pre></div>
+</div>
+<p>encuentra todos los Bar Juan y ademas Bar Juanjo y Cafetería bar Juan.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&quot;bar juan&quot;
+</pre></div>
+</div>
+<p>encuentra solo el nombre exacto, incluso teniendo en cuanta los espacios</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&quot;bar juan*&quot;
+</pre></div>
+</div>
+<p>encuentra Bar Juan y Bar Juanjo pero no la Cafetería bar Juan</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+<p>encuentra solo cliente con el código 100</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>100*
+</pre></div>
+</div>
+<p>encuentra cliente 100, 1001, 1002 etc., pero también las franquicias de “100 Montaditos”</p>
+<p>En la búsqueda de artículos:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>barril*50
+</pre></div>
+</div>
+<p>encuentra tanto “Barril AMSTEL 50L” como “Barril 50L Heineken”</p>
+</section>
+<section id="busqueda-con-parametros">
+<h2>Búsqueda con parámetros<a class="headerlink" href="#busqueda-con-parametros" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los parámetros son normalmente una o dos letras separadas por <strong>:</strong> (dos puntos).
+Un separador alternativo es configurable en la [c]configuración de la aplicación|views/Ribera2.Shell.Views.ThemeConfigView.txt[c].</p>
+<p>Después de <strong>:</strong> va normalmente el texto o código buscado o el parámetro se puede quedar vacío.
+Al texto buscado se aplican las mismas reglas de uso de * y de <strong>«</strong> mencionados en apartado anterior.</p>
+<p>Se aplican las siguiente reglas:</p>
+<ul class="simple">
+<li><p>Se permite cualquier combinación y orden de parámetros</p></li>
+<li><p>Múltiples parámetros se separan con un espacio</p></li>
+<li><p>Todos los parámetros se aplican al mismo tiempo</p></li>
+<li><p>Para añadir un valor sin parámetro después de otros parámetros utiliza solo <strong>:</strong></p></li>
+</ul>
+<p>Ejemplo de búsqueda de con parámetro:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hotel d:valencia
+</pre></div>
+</div>
+<p>busca todos los hoteles en Valencia</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>d:valencia :hotel
+</pre></div>
+</div>
+<p>es equivalente al anterior. La búsqueda sin parámetro no necesita : si esta en primera posición</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hotel d:valencia b:
+</pre></div>
+</div>
+<p>busca todos hoteles en Valencia incluyendo los marcados de baja</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rr:10
+</pre></div>
+</div>
+<p>busca todos los clientes de la ruta 10</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rr:
+</pre></div>
+</div>
+<p>busca todos los clientes sin ruta</p>
+</section>
+<section id="busqueda-de-la-direccion">
+<h2>Búsqueda de la dirección<a class="headerlink" href="#busqueda-de-la-direccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La búsqueda de dirección permite buscar por la calle, población y código postal. Separa la calle y población por coma.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>d:46680
+</pre></div>
+</div>
+<p>busca el código postal exactamente</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>d:mayor
+</pre></div>
+</div>
+<p>busca por calle o población. Encuentra todas las plazas mayor y también Villamayor.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>d:mayor, villamayor
+</pre></div>
+</div>
+<p>encuentra solo la plaza mayor de Villamayor.</p>
+<p>En caso que hay mas pueblos con el mismo nombre utiliza el código postal:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>d:mayor, 46680
+</pre></div>
+</div>
+<p>Para buscar solo el pueblo sin tener que utilizar el código postal utiliza el asterisco:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>d:*, mayor
+</pre></div>
+</div>
+<p>encuentra todas las calles de Villamayor.</p>
+</section>
+<section id="busqueda-por-fecha">
+<h2>Búsqueda por fecha<a class="headerlink" href="#busqueda-por-fecha" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>típicos parámetros para las fechas son fd: y fh: para fecha desde y fecha hasta.
+La fecha hasta esta incluida en la búsqueda.</p>
+<p>La fecha puede estar representada de siguiente manera:</p>
+<ul class="simple">
+<li><p><strong>0</strong> – hoy ej.: “fd:0”</p></li>
+<li><p><strong>10</strong> – día diez del mes actual:</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fd:01 fh:31
+</pre></div>
+</div>
+<p>incluye todo el mes actual, funciona aunque el mes actual tenga 30 días</p>
+<ul class="simple">
+<li><p><strong>1005</strong> – 10 de mayo de este año</p></li>
+<li><p><strong>100515</strong> – 10 de mayo 2015</p></li>
+<li><p><strong>10052015</strong> – 10 de mayo 2015</p></li>
+<li><p><strong>+3</strong> – en tres días</p></li>
+<li><p><strong>-1</strong> – ayer – suma o resta los días de la fecha de hoy</p></li>
+<li><p><strong>x</strong> – miércoles de semana actual (las letras de los días son <strong>lmxjvsd</strong>)</p></li>
+<li><p><strong>xx</strong> – miércoles de la semana que viene etc.:</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fd:l fh:vv
+</pre></div>
+</div>
+<p>desde lunes de esta semana hasta viernes de la semana que viene.</p>
+<ul class="simple">
+<li><p><strong>-x</strong> – miércoles de la semana pasada</p></li>
+</ul>
+<p>Indicar solo fd o fh selecciona solo ese día. Utiliza * (asterisco) con una fecha para indicar el intervalo abierto sin indicar la otra fecha:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fd:01*
+</pre></div>
+</div>
+<p>incluye todo desde día uno</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fh:-v*
+</pre></div>
+</div>
+<p>incluye todo hasta viernes pasado</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Conceptos de la interfaz de usuario</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pantalla.html">Disposición de las pantallas</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Búsquedas</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Conceptos de la interfaz de usuario</a><ul>
+      <li>Previous: <a href="pantalla.html" title="capítulo anterior">Disposición de las pantallas</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/winfra_ui/busqueda.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

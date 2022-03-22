@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.md</p>
+<p>=== Configuración de la ruta</p>
+<p>== Cabecera de la ruta</p>
+<p>Campos para tener en cuenta de la cabecera de la ruta:</p>
+<ul class="simple">
+<li><p><strong>Tipo ruta</strong> distingue entre las rutas de venta y las rutas de reparto.
+La ruta de tipo <em>Pendiente</em> sirve para poder crear una nueva ruta que el sistema no tiene en cuenta
+y poder activarla cambiando su tipo.</p></li>
+</ul>
+<p>Un punto de venta solo puede estar en una ruta de reparto con el mismo almacén y organización de venta.</p>
+<ul class="simple">
+<li><p><strong>Cargar en PDA</strong> indica que la ruta esta incluida en las cargas de dispositivos móvil</p></li>
+<li><p><strong>Tarifa</strong> indica la tarifa que se va a utilizar <strong>SIEMPRE</strong> para esta ruta.
+La tarifa indicada prevalece sobre la configuración del cliente.</p></li>
+<li><p><strong>Proveedor integración</strong> indica si la ruta ha sido creada desde la integración de datos con algún proveedor</p></li>
+<li><p><strong>Almacén</strong> indica el almacén del cual saldrá la mercancía cuando se realicen ventas a los puntos de venta incluidos en la ruta. Solo opera en rutas de tipo geográfica</p></li>
+</ul>
+<p>Por ejemplo la ruta nocturna indica la tarifa nocturna.
+Al incluir el cliente en la ruta nocturna le aplicamos automáticamente esta tarifa aunque el cliente mismo esta configurado
+con la tarifa normal.</p>
+<p>== Configurar los puntos de venta de la ruta</p>
+<p>La pestaña de <strong>Elementos de la ruta</strong> contiene dos lista</p>
+<ul class="simple">
+<li><p>los puntos de venta incluidos en la ruta (a la izquierda)</p></li>
+<li><p>resultados de la búsqueda de puntos de venta (a la derecha). Si un punto de venta ya esta en la ruta esta marcado en los resultados.</p></li>
+</ul>
+<p>= Frecuencia de visita</p>
+<p>Indica una frecuencia de visita de los clientes.</p>
+<ul class="simple">
+<li><p><strong>Semanal</strong> - visita cliente cada semana</p></li>
+<li><p><strong>Semanas pares, Semanas impares</strong> - visita cliente cada dos semanas</p></li>
+<li><p><strong>Mensual 1., 2., 3., 4. semana</strong> - visita cliente cada 4 semanas</p></li>
+</ul>
+<p>! La frecuencia no esta basada en el numero de semana en el año actual.
+Utilizar el numero de semana según el calendario ISO rompería la continuación al cambiar el año.
+Un año con 53 semanas (2015, 2020) tiene la ultima impar y la siguiente es numero 1, también impar.</p>
+<p>= Añadir y quitar los puntos de venta</p>
+<p>Utiliza flechas situadas entre las dos listas para incluir y excluir los puntos de venta.</p>
+<p>Utiliza botón <strong>Quitar puntos de venta</strong> para eliminar puntos de venta de la ruta pero seleccionando los entre los resultados de la búsqueda.
+Esto permite, por ejemplo, quitar puntos de venta de una población filtrando por su dirección.</p>
+<ul class="simple">
+<li><p>Abra la ruta de la que hay que quitar los puntos de venta</p></li>
+<li><p>Busca la población ej. por código postal. Si ademas filtra la misma ruta solo verá los puntos de venta a quitar.</p></li>
+</ul>
+<p>! rv:Ruta 2 Lunes d:46680</p>
+<ul class="simple">
+<li><p>Los resultados incluidos están marcados</p></li>
+<li><p>Selecciona los puntos de venta, puede seleccionar todos, los no incluidos en la ruta no se tienen en cuenta</p></li>
+<li><p>Pincha botón <strong>Quitar puntos de venta</strong></p></li>
+</ul>
+<p>= Mover puntos de venta entre rutas</p>
+<p>Mover los puntos de venta quita puntos de una ruta y los agrega a otra ruta.
+Esto es especialmente útil para rutas de reparto que no permiten que cliente este en dos a la vez.</p>
+<ul class="simple">
+<li><p>Abre la ruta de origen</p></li>
+<li><p>Seleccione los puntos de venta</p></li>
+<li><p>Pinchar botón <strong>Traspasar</strong></p></li>
+<li><p>Selecciona ruta de destino en el dialogo y pincha <strong>Aceptar</strong></p></li>
+</ul>
+<p>= Incluir puntos de venta de otra ruta</p>
+<p>Copia los clientes a nueva ruta pero los mantiene en la original</p>
+<ul class="simple">
+<li><p>Abre la ruta de destino</p></li>
+<li><p>En el búsqueda busca los clientes de ruta de origen. Utiliza el parámetro de ruta (rv, rr, rp)</p></li>
+</ul>
+<p>! rv:Ruta 2 Lunes</p>
+<ul class="simple">
+<li><p>Los resultados de la búsqueda son ordenados por orden de ruta</p></li>
+<li><p>Selecciona los puntos de venta y pincha la flecha para incluir</p></li>
+</ul>
+<p>= Mantener orden de la ruta</p>
+<p>Tiene varia alternativas para ordenar la ruta</p>
+<ul class="simple">
+<li><p>Utilice botones <strong>Mover arriba</strong> y <strong>Mover abajo</strong></p></li>
+<li><p>Indica el orden en la columna <strong>Orden</strong></p></li>
+<li><p>Pincha botón <strong>Reordenar</strong> para aplicar el orden y recalcular la numeración</p></li>
+</ul>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

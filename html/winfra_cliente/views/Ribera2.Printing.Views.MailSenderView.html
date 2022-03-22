@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Ribera2.Printing.Views.MailSenderView.md</p>
+<p>=== Envío de documentos por correo electrónico</p>
+<p>La pantalla permite enviar por correo electrónico los documentos que se han impreso a una cola de winfra.
+Cada documento esta adjunto al mensaje de correo como un fichero PDF. Es posible enviar todo tipo
+de documentos ya sean albaranes, facturas o informes.</p>
+<p>== Parámetros de la pantalla:</p>
+<ul class="simple">
+<li><p><strong>Cola de impresión</strong> - indica la cola de la que se van enviar los documentos</p></li>
+<li><p><strong>Destinatario</strong> - si esta marcada la opción de utilizar dirección indicada en el documento se envía a su dirección.
+La impresión de los albaranes y de las facturas incluye la dirección de cliente indicada en <strong>Mail facturación</strong>.
+Si desmarca la opción tiene que indicar la dirección y todos los documentos sean enviados a la dirección indicada.
+Puede indicar mas que una dirección separadas por coma o punto-coma.</p></li>
+<li><p><strong>Asunto</strong> - si esta marcada la opción de utilizar el asunto indicado en el documento el envío utiliza la descripción
+del documento como asunto del mensaje. Si desmarca la opción tiene que indicar un asunto.</p></li>
+<li><p><strong>Mensaje</strong> - el texto del mensaje</p></li>
+<li><p><strong>Pie del mensaje</strong> - pie del mensaje esta incluido al final del mensaje. A diferencia del mensaje el pie se guarda al lanzar
+el envío.</p></li>
+</ul>
+<p>== Configuración del servidor de correo</p>
+<p>El envío necesita la configuración del servidor de correo. La configuración esta en los <strong>Datos generales</strong> en el apartado
+<strong>Envío documentos por correo electrónico</strong>.
+Contacta con su proveedor de correo si desconoce la configuración de su servidor.</p>
+<p>== Control de los errores</p>
+<p>Una vez el documento esta enviado se elimina de la cola. Si ocurre un error durante del envío el documento
+se queda en la cola indicando el error. Es posible revisar los errores en la pantalla de trabajos de impresión.
+Si el error es intermitente, por ejemplo un fallo de conexión a internet, es posible reiniciar el estado del
+trabajo y luego volver a iniciar el envío.</p>
+<p>Si el error esta en el propio documento, por ejemplo la dirección de correo de cliente no es válida, tendrá modificar
+el correo y volver a imprimir.</p>
+<p>! La pantalla de impresión masiva de albaranes y facturas permite filtrar los documentos enviados.</p>
+<p>== Colas para el envío</p>
+<p>Es posible utilizar cualquier colo de impresión para el envío de correo, pero es posible lanzar solo un envío por cada cola.
+Si necesita que varios usuarios envíen correos a la vez hay que crear una cola para cada uno.</p>
+<p>!! En el caso de impresión de documentos de venta el perfil utilizado tiene que tener el <strong>Tamaño de lote</strong> igual a <strong>1</strong>.</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Ribera2.Printing.Views.MailSenderView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

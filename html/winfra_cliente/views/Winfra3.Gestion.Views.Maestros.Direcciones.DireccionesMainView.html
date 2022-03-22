@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.md</p>
+<p>=== Gestión de las direcciones</p>
+<p>Pantalla de utilidades que permite búsqueda, localización y actualización de las direcciones.</p>
+<p>== Operaciones</p>
+<ul class="simple">
+<li><p><strong>Geolocalizar</strong> utiliza los servicios de Google Maps para validar las direcciones seleccionadas
+y buscar sus coordenadas geográficas.</p></li>
+<li><p><strong>Actualizar</strong> la dirección. Una vez la dirección ha sido geolocalizada la operacion actualiza la calle,
+numero y código postal tal como lo ha localizado Google Maps.</p></li>
+</ul>
+<p>== Datos de las direcciones</p>
+<ul class="simple">
+<li><p><strong>Enlace</strong> muestra de quien es la dirección. Las primeras letras indican el tipo: P - proveedor, A - acreedor,
+PV - punto de venta, IF - identificación fiscal</p></li>
+<li><p><strong>Coordenadas</strong> indican las coordenadas geográficas: Latitud y longitud. El vínculo abre Google Maps en el navegador.</p></li>
+<li><p><strong>Dirección localizada</strong> es la descripción de la dirección tal como se ha podido encontrar en el mapa.
+Al <strong>actualizar</strong> la dirección estos datos se van a copiar a los campos Vía, Numero y Código postal.</p></li>
+<li><p><strong>Tipo dirección localizada</strong> indica el tipo de dirección que se ha podido localizar. Si la dirección es correcta
+el tipo de dirección es <strong>street_address</strong>. Si solo se encuentra el pueblo la dirección es <strong>locality</strong> etc.
+Puede filtrar y ordenar los tipos de localización. La lista de tipos esta a continuación.</p></li>
+</ul>
+<p>== Tipos de localización y componentes de las direcciones</p>
+<p>Esto es la lista de tipos desde la documentación de Google Maps.</p>
+<p>El geocodificador admite y devuelve los siguientes tipos en las matrices de tipo de dirección y tipo de componente de dirección:</p>
+<ul class="simple">
+<li><p><strong>street_address</strong> indica una dirección exacta.</p></li>
+<li><p><strong>route</strong> indica la denominación de una carretera (como «US 101»).</p></li>
+<li><p><strong>intersection</strong> indica una intersección principal, generalmente de dos calles importantes.</p></li>
+<li><p><strong>political</strong> indica una entidad política. Generalmente, este tipo indica un polígono de alguna administración pública.</p></li>
+<li><p><strong>country</strong> indica la entidad política nacional, y es generalmente el tipo de orden más alto que devuelve el geocodificador.</p></li>
+<li><p><strong>administrative_area_level_1</strong> indica una entidad civil de primer orden por debajo del nivel de país. En Estados Unidos, estos niveles administrativos son los estados. No todos los países poseen estos niveles administrativos. En la mayoría de los casos, los nombres cortos de administrative_area_level_1 coincidirán considerablemente con las subdivisiones de ISO 3166-2 y otras listas conocidas; sin embargo, no podemos garantizarlo debido a que nuestros resultados de geocodificación están basados en diferentes señales y datos de ubicación.</p></li>
+<li><p><strong>administrative_area_level_2</strong> indica una entidad civil de segundo orden por debajo del nivel de país. En Estados Unidos, estos niveles administrativos son los condados. No todos los países poseen estos niveles administrativos.</p></li>
+<li><p><strong>administrative_area_level_3</strong> indica una entidad civil de tercer orden por debajo del nivel de país. Este tipo indica una división civil inferior. No todos los países poseen estos niveles administrativos.</p></li>
+<li><p><strong>administrative_area_level_4</strong> indica una entidad civil de cuarto orden por debajo del nivel de país. Este tipo indica una división civil inferior. No todos los países poseen estos niveles administrativos.</p></li>
+<li><p><strong>administrative_area_level_5</strong> indica una entidad civil de quinto orden por debajo del nivel de país. Este tipo indica una división civil inferior. No todos los países poseen estos niveles administrativos.</p></li>
+<li><p><strong>colloquial_area</strong> indica un nombre alternativo de uso frecuente para la entidad.</p></li>
+<li><p><strong>locality</strong> indica una entidad política constituida de una ciudad o un pueblo.</p></li>
+<li><p><strong>ward</strong> indica un tipo específico de localidad japonesa para facilitar la distinción entre los múltiples componentes de localidad en una dirección japonesa.</p></li>
+<li><p><strong>sublocality</strong> indica una entidad civil de primer orden por debajo de una localidad. Algunas ubicaciones pueden recibir uno de los tipos adicionales: sublocality_level_1 a sublocality_level_5. Cada nivel de sublocalidad es una entidad civil. Los números más altos indican un área geográfica más pequeña.</p></li>
+<li><p><strong>neighborhood</strong> indica un barrio determinado.</p></li>
+<li><p><strong>premise</strong> indica una ubicación determinada, generalmente un edificio o un conjunto de edificios con un nombre en común.</p></li>
+<li><p><strong>subpremise</strong> indica una entidad de primer orden por debajo de una ubicación determinada; generalmente un edificio en particular en un conjunto de edificios con un nombre en común.</p></li>
+<li><p><strong>postal_code</strong> indica un código postal tal como se usa para identificar una dirección de correo postal dentro del país.</p></li>
+<li><p><strong>natural_feature</strong> indica una atracción natural destacada.</p></li>
+<li><p><strong>airport</strong> indica un aeropuerto.</p></li>
+<li><p><strong>park</strong> indica un parque determinado.</p></li>
+<li><p><strong>point_of_interest</strong> indica un punto de interés determinado. Generalmente, estos «PI» son entidades locales destacadas que no pueden incluirse fácilmente en otra categoría, como el edificio «Empire State» o la «Estatua de la libertad».</p></li>
+</ul>
+<p>Una lista vacía de tipos indica que no hay tipos conocidos para el componente de dirección específico, por ejemplo, Lieu-dit en Francia.</p>
+<p>Además de lo dicho antes, los componentes de dirección pueden incluir los siguientes tipos.</p>
+<p>! Nota: Esta lista no está completa y está sujeta a cambio.</p>
+<ul class="simple">
+<li><p><strong>floor</strong> indica el piso en la dirección de un edificio.</p></li>
+<li><p><strong>establishment</strong> generalmente indica un lugar que aún ha sido categorizado.</p></li>
+<li><p><strong>point_of_interest</strong> indica un punto de interés determinado.</p></li>
+<li><p><strong>parking</strong> indica un área de estacionamiento o una estructura de estacionamiento.</p></li>
+<li><p><strong>post_box</strong> indica una casilla de correo específica.</p></li>
+<li><p><strong>postal_town</strong> indica un conjunto de áreas geográficas, como locality y sublocality, utilizadas para las direcciones postales en algunos países.</p></li>
+<li><p><strong>room</strong> indica una sala en la dirección de un edificio.</p></li>
+<li><p><strong>street_number</strong> indica el número exacto de una calle.</p></li>
+<li><p><strong>bus_station</strong>, <strong>train_station</strong> y <strong>transit_station</strong> indican la ubicación de una parada de autobús, tren o transporte público respectivamente.</p></li>
+</ul>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

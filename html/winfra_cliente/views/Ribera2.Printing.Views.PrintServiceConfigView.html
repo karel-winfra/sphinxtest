@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Ribera2.Printing.Views.PrintServiceConfigView.md</p>
+<p>=== Configuración del servicio de impresión</p>
+<p>Permite configurar el servicio de impresión - enlace entre las colas de winfra y las colas de windows instaladas en la maquina.</p>
+<p>La configuración permite configurar múltiples colas de winfra con una o varias colas de windows.
+La cola de winfra solo puede aparecer una vez.</p>
+<p>== Configuración de servicio</p>
+<ul class="simple">
+<li><p><strong>Habilitar impresión</strong> - indica si la impresión esta habilitada. Sirve para poder parar la impresión del servicio por completo.</p></li>
+<li><p><strong>Intervalo</strong> - intervalo en segundos entre las comprobaciones de la cola.</p></li>
+</ul>
+<p>!! El servicio comprueba si hay nuevos documentos en la cola de winfra según el intervalo indicado.
+Por lo tanto, el intervalo es el máximo tiempo entre agregar un nuevo documento a la cola y el inicio de la impresión.
+Si el tiempo es demasiado corto (menor que 15 segundos) puede sobrecargar el equipo de servidor.</p>
+<p>== Inicio de sesión automático</p>
+<p>Permite configurar un usuario y contraseña para iniciar la sesión automáticamente después de lanzar la aplicación.
+Si el inicio no esta configurado hay que logearse para poder imprimir.</p>
+<p>!! Para el inicio automático hay que utilizar usuario solo con la rol <strong>Impresora</strong> para evitar acceso a otras partes de la aplicación.</p>
+<p>== Colas de impresión</p>
+<p>Añade la configuración de la cola de winfra y su correspondiente cola de windows o puerto de serie.</p>
+<ul class="simple">
+<li><p><strong>Cola de impresión</strong> - cola de winfra desde cual se va a imprimir</p></li>
+<li><p><strong>Tipo de proceso</strong> - indica el tipo de impresión que se va a utilizar. El valor por defecto es <strong>Cola de windows</strong>.</p></li>
+</ul>
+<p>Utiliza la opción <strong>Cola de windows</strong> si la impresora esta configurada en los <em>Dispositivos e impresoras</em> como una cola de windows.
+Esto se aplica a todas las impresoras conectadas por USB, con impresión por IP o las impresoras conectadas a otros equipos
+y compartidas a través de la red.</p>
+<p>La opción de <strong>Puerto de serie</strong> se utiliza para impresoras conectadas directamente a los puertos de serie.
+Esto es aplicable a algunas antiguas impresoras matriciales.</p>
+<p>La opción de <strong>Export a Excel</strong> (opcionalmente sin formato) permite definir una carpeta a la que exportar automáticamente
+los documentos agregados a la cola. No hay que indicar la impresora, papel etc.</p>
+<p>! Si el documento (o informe) incluye un nombre de fichero se va crear con el mismo nombre indicado y con las subcarpetas si se han indicado.
+Si el documento ya existe lo sobrescribe.</p>
+<p>! Si el documento no tiene el nombre de fichero se utilizara la descripción del documento y si el nombre ya existe se añade
+un contador.</p>
+<ul class="simple">
+<li><p><strong>Impresora</strong> - nombre de la impresora - utiliza el dialogo de selección de impresora para elegir el nombre.
+Si el tipo de proceso es <strong>Puerto de serie</strong> escriba el nombre y numero de puerto ej.: <strong>LTP1</strong> o <strong>COM1</strong>.</p></li>
+<li><p><strong>Configuración genérica</strong> - utiliza la configuración genérica (por defecto) de la impresora de windows en lugar
+de utilizar la configuración del usuario desde <em>Dispositivos e impresoras</em>.</p></li>
+<li><p><strong>Tamaño de papel</strong> - indica el tamaño de papel utilizado por la impresora. El dato es opcional, si no se indica, la impresora
+utiliza el papel por defecto.
+La opción tiene uso para papeles de tamaños personalizados para impresoras matriciales o para impresión de etiquetas etc.</p></li>
+<li><p><strong>Copias en blanco y negro</strong> - indica si las copias de los documentos se deben imprimir en una escala de grises.
+El documento original se imprime en color. Esto es aplicable a los documentos de venta.</p></li>
+</ul>
+<p><strong>Color</strong> - valor por defecto, imprime las copias en color</p>
+<p><strong>EscalaGrises</strong> - imprime las copias a escala de grises. No cambia el modo de impresión de la propia impresora, modifica
+el documento y convierte las paginas correspondientes a las copias a escala de grises.</p>
+<p><strong>EscalaGrises_SepararPaginas</strong> - imprimir las copias a escala de grises. Separa las paginas en documentos individuales.</p>
+<p><strong>EscalaGrises_Ticket</strong> - imprime las copias a escala de grises. Imprime en un documento único pero genera el ticket de impresión para cada página.</p>
+<p>!! La mejor opción para imprimir en escala de grises es <strong>EscalaGrises_Ticket</strong>. Si no funciona prueba con <strong>EscalaGrises_SepararPaginas</strong> pero suele
+ser mucho mas lenta. La <strong>EscalaGrises</strong> es rápida pero no garantiza que se va a utilizar solo tóner negro.</p>
+<ul class="simple">
+<li><p><strong>Ruta raíz para los procesos de exportación</strong> indica la ruta raíz para la exportación, ej.: C:\export<br />
+La opción solo es válida para los tipos de proceso <strong>Export a Excel</strong></p></li>
+<li><p><strong>Código inicialización puerto serie</strong> indica una secuencia de bytes que se añade delante de cada documento enviado a
+puerto de serie. Escribe el valor en el formato hexadecimal de los bytes, ejemplo <strong>1DFF04</strong>.
+Esto se utiliza para configurar la impresora matricial con un tamaño de letra, modo de impresión (draft) etc.
+El código depende del modelo de la impresora</p></li>
+</ul>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Ribera2.Printing.Views.PrintServiceConfigView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.md</p>
+<p>=== Perfil de transmisión</p>
+<p>Permite configurar el envío y recepción de los datos a los proveedores</p>
+<ul class="simple">
+<li><p><strong>Tipo</strong> identifica el modulo de comunicación</p></li>
+<li><p><strong>Proveedor</strong> indica el proveedor</p></li>
+</ul>
+<p>== Datos generales</p>
+<p>Datos de configuración del modulo de transmisión. Los datos dependen del tipo de transmisión seleccionada.</p>
+<p>== Datos control</p>
+<ul class="simple">
+<li><p><strong>Transmisión automática</strong> marca la opción para enviar los datos en una transmisión automática por la noche
+!! No todos los proveedores tienen la opción de envío automático.</p></li>
+<li><p><strong>Días de la semana</strong> indica los días en las que se va ejecutar el envío automático</p></li>
+<li><p><strong>Días del mes</strong> indica días del mes en los que se va ejecutar el envío automático.
+Acepta varios días separados por coma ej.: 10, 20, 31. Si el mes no tiene día 31 se ejecutara el último día del mes.</p></li>
+</ul>
+<p>! Si no indica ningún día de la semana ni del mes se va transmitir todos los días.</p>
+<ul class="simple">
+<li><p><strong>Control estados venta</strong> - Controlaremos si hay ventas en el periodo que se queden fuera por el estado del documento.
+Si esta marcado avisa si hay, por ejemplo, un documento en el estado de carga entre las fechas que hay que transmitir.</p></li>
+</ul>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

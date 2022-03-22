@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView.md</p>
+<p>=== Pedido global</p>
+<p>Pedido global representa un pedido que se va a servir en varias entregas,
+posiblemente a varias direcciones y se va a facturar en una o varias facturas
+posiblemente a diferentes clientes.</p>
+<p>Pedido global permite controlar el total del pedido, cantidades entregadas y
+facturadas y posibles discrepancias.</p>
+<p>== Configuración del pedido global</p>
+<p>La configuración se aplica al generar las entregas y las facturas. Si los documentos ya estan generados
+hay que modificarlos manualmente.</p>
+<p>Los valores por defecto de la configuración se pueden configurar en <em>Datos de tipo documento</em>,
+apartado de <em>Pedido global</em>.</p>
+<p>= Tipo</p>
+<p>Existen dos tipos de pedido global:</p>
+<ul class="simple">
+<li><p><strong>Pedido</strong> - las entregas hay que generarlas manualmente desde la pantalla de
+pedido global</p></li>
+<li><p><strong>Contrato</strong> - las entregas se generan automaticamente desde las descargas de
+venta móvil hasta agotar la cantidad pedida. Es posible generar la entrega manualmente
+igual como en caso de pedido.</p></li>
+</ul>
+<p>= Gestión de envases</p>
+<p>Existen tres modos de gestionar los envases:</p>
+<ul class="simple">
+<li><p><strong>No cargar envase</strong> - el envase no se carga ni en la factura ni en la entrega</p></li>
+<li><p><strong>Facturar envases, no cargar en la entrega</strong> - los envases se cargar en la factura
+y no se incluyen en las entregas. Las devoluciones hay que abonarlas en otro documento.</p></li>
+<li><p><strong>Cargar entrega en documento aparte, no facturar</strong> - no se carga el envase en la factura.
+Junto con cada entrega se genera un documento valorado de envases. Las devoluciones hay que
+abonarlas en el mismo documento.</p></li>
+</ul>
+<p>!! Si el cliente seleccionado tiene marcado <strong>No se cargan los envase</strong> la gestión de envases cambia
+automaticamente a <strong>No cargar envase</strong>.</p>
+<p>= Entregas valoradas</p>
+<p>Si la opción esta marcada los albaranes de entrega se imprimirán valorados.
+Al desmarcar la opción la impresión solo incluye el artículo y la cantidad.
+! La opción solo es aplicable al tipo pedido, las entregas de contratos no se valoran.</p>
+<p>== Detalles</p>
+<p>Indica los artículos y cantidades pedidas. La campaña y el valor del descuento es opcional.
+El valor de descuento se corresponde al tipo de calculo de la campaña. Si la campaña es de tipo
+<strong>Porcentaje</strong> el valor tiene que ser el porcentaje aplicado etc.</p>
+<p>El descuento se aplican a las lineas de las entregas y de las facturas. Si no se ha indicado ningún descuento
+aplicamos las condiciones vigentes del cliente.</p>
+<p>El uso de la campaña de tipo regalo o promoción tiene varias limitaciones:</p>
+<ul class="simple">
+<li><p>En caso de pedido solo se pueden generar la factura una vez se han generado todas las entregas.</p></li>
+<li><p>Las notas de entregas no reflejan el regalo (en el caso que se imprimen valoradas).</p></li>
+</ul>
+<p>== Entregas</p>
+<p>Las entregas se generan en dos pasos:</p>
+<ul class="simple">
+<li><p>Entrega del pedido global - indica la dirección de entrega, artículos y cantidades entregadas</p></li>
+<li><p>Nota de entrega - un albarán de tipo <strong>Nota de entrega</strong> asociado a la entrega de pedido global
+que se genera automaticamente apartir de su cabecera y líneas.</p></li>
+</ul>
+<p>En el caso de generar las entregas de un pedido de tipo <strong>Contrato</strong> en el proceso automático de la descarga de las
+ventas móvil generamos los dos documentos a la vez.</p>
+<p>= Agregar entrega directa</p>
+<p>La operación genera una entrega del pedido global con el destinatario igual al cliente del pedido.
+La cantidad entregada es lo que queda por entregar.</p>
+<p>= Agregar entrega manual</p>
+<p>La operación crea un nueva entrega vacía. Hay que indicar el destinatario y las cantidades manualmente.</p>
+<p>! Para generar la <strong>nota de entrega</strong> utiliza la operación <strong>Generar albarán</strong> de la pantalla de la entrega
+o de la pantalla <strong>Entregas globales</strong></p>
+<p>== Facturas</p>
+<p>Generación de las facturas crea un documento de venta de tipo <strong>factura directa global</strong> asociado con el pedido global.</p>
+<p>= Facturar</p>
+<p>La operación genera la factura con la fecha y cliente indicado. Las cantidades facturadas varían según el tipo de pedido
+global.</p>
+<ul class="simple">
+<li><p>En caso de pedido facturamos todos los artículos entregados que no estén facturados.
+Para contar como entregado no hace falta generar la <strong>nota de entrega</strong> (albarán)</p></li>
+<li><p>En caso de contrato facturamos todos los artículos pedidos que no estén facturados.</p></li>
+</ul>
+<p>= Factura vacía</p>
+<p>La operación genera una factura vacía enlazada con el pedido global con el fin de poder indicar manualmente las cantidades.
+Por ejemplo en caso de las devoluciones.</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

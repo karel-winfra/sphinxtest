@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.md</p>
+<p>=== Contadores de entregas</p>
+<p>Define un contador para acumular la venta realizada al cliente.
+Cada contador suma las caja de cargo y de regalo por separado.
+Contador permite definir el regalo máximo o en relación con cargo para avisar en la linea de venta y en la ficha de la pda.</p>
+<p>Los contadores están definidos por cliente.</p>
+<p>== Configuración del contador</p>
+<ul class="simple">
+<li><p><strong>Activo</strong> - Indica si el contador esta activo (acumula los cargos y regalos).
+!! La búsqueda por defecto solo muestra los contadores activos. Utiliza parámetro <strong>b:</strong> para ver todos los contadores</p></li>
+<li><p><strong>Desde</strong> - activo desde la fecha</p></li>
+<li><p><strong>Hasta</strong> - activo hasta la fecha (inclusivo). Las ventas fuera de las fechas no acumulan en el contador</p></li>
+<li><p><strong>Artículo formato</strong> - se acumulan las ventas del artículo formato indicado</p></li>
+<li><p><strong>Artículo consumo</strong> - se acumulan las ventas de todos los artículos formato relacionados con el artículo consumo.
+!! La cantidad acumulada del artículo consumo es la cantidad de entrega multiplicada por la equivalencia de artículo formato vendido. Hay que indicar el cargo y regalo teniendo en cuenta la equivalencia.</p></li>
+<li><p>**Artículo agrupación - se acumulan las ventas de artículos de formato incluidos en la agrupación</p></li>
+<li><p><strong>Cargo</strong> - Indica el cargo mínimo para aplicar el regalo. Si el cargo es <strong>0</strong> la cantidad de regalo es disponible solo una vez.
+Si el cargo es mayor que <strong>0</strong>, la cantidad de regalo es disponible cada vez que se acumula la venta igual a cargo.</p></li>
+<li><p><strong>Regalo</strong> - Indica la cantidad para regalar.</p></li>
+<li><p><strong>Campaña</strong> - Indica una campaña de tipo <strong>Promoción</strong> o <strong>Regalo</strong>. Solo se acumulan los regalos si son de la campaña indicada.
+La campaña es opcional.</p></li>
+<li><p><strong>Descripción</strong> - nombre del contador que aparece en el aviso. La descripción es opcional.</p></li>
+<li><p><strong>Cargo acumulado</strong> - la cantidad total de cargo incluida en el contador</p></li>
+<li><p><strong>Regalo acumulado</strong> - la cantidad total de regalo incluida en el contador</p></li>
+</ul>
+<p>== Aviso en la linea de venta</p>
+<p>En caso de cargo igual a <strong>0</strong> el aviso indica la cantidad de regalo que queda por entregar.
+! regalo disponible = regalo - regalo acumulado</p>
+<p>En caso de cargo mayor que <strong>0</strong> el aviso indica la cantidad de cargo para el siguiente regalo y la cantidad de regalo ya disponible.
+! regalo aplicable = redondear_abajo(cargo acumulado / cargo) * regalo
+! regalo disponible = regalo aplicable - regalo acumulado</p>
+<p>== Contador aplicable</p>
+<p>Winfra selecciona el contador filtrando el cliente y la fecha de documento. Solo selecciona los contadores activos.</p>
+<p>A continuación busca por artículo formato, por artículo consumo y por la agrupación en este orden.</p>
+<p>Si dos contadores tienen el mismo artículo seleccionamos la fecha desde posterior.</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

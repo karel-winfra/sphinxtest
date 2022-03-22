@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.md</p>
+<p>=== Configuración de la sincronización</p>
+<p>Configurar la conexión a otro dominio para traer la venta y sincronizar los maestros.</p>
+<p>== Estadística de venta (modelo Leondis-Reycer)</p>
+<ul class="simple">
+<li><p>D1 genera albarán o factura directa (una venta)</p></li>
+<li><p>D2 recibe las ventas y genera documento estadístico</p></li>
+</ul>
+<p>Documento estadístico no será asignable en preparación cargas para su reparto.
+El caso de uso es D1 vende el producto de un proveedor a sus clientes
+pero D2 tiene que transmitir esta información al proveedor.</p>
+<p>En D2 el documento se generará como estadístico y no será asignable a
+cargas pero si transmisible a proveedores.</p>
+<p>D1 - SyncModoVentas=Ninguno</p>
+<p>D2 - SyncModoVentas=Estadistica</p>
+<p>== Venta externa (modelo Provea-Discamt)</p>
+<ul class="simple">
+<li><p>D1 hace una venta pero genera documento estadístico</p></li>
+<li><p>D2 recibe las ventas, genera albarán o factura directa para la entrega</p></li>
+<li><p>D1 recibe las ventas modificadas y actualiza el documento original</p></li>
+</ul>
+<p>El caso de uso es una empresa que vende los productos de otra pero no los reparte ni los factura.</p>
+<p>El documento de venta cuando baja de la PDA se integra en Winfra como
+documento estadístico que no se asigna a cargas ni se transmite a proveedores. Para eso todos los clientes tienen
+que tener la condición de la venta del proveedor enlazado indicando <strong>Albarán individual</strong> y
+<strong>Documento de entrega = Documento estadístico</strong></p>
+<p>D1 recibe y actualiza los documentos por si se han modificado en el reparto para tener información correcta para
+comisiones de los vendedores.</p>
+<p>D1 - SyncModoVentas=VentaExternaLiquidacion</p>
+<p>D2 - SyncModoVentas=VentaExterna</p>
+<p>== Reparto (modelo Sedinte-Dispegra)</p>
+<ul class="simple">
+<li><p>D1 crea un pedido (o lo recibe desde el fabricante como Pepsi, Schweppes)</p></li>
+<li><p>D2 recibe el pedido y genera <strong>albaran de intermediacion de D1</strong></p></li>
+<li><p>D1 recibe las ventas modificadas en el proceso de reparto y actualiza el documento original (convierte pedido a albarán/factura directa)</p></li>
+</ul>
+<p>En el proveedor D1 y D2 sincronizamos la forma de pago a contado, el resto de formas de pago se integraran
+como la forma de pago credito establecida en el proveedor D2.</p>
+<p>D1 - SyncModoVentas=RepartoLiquidacion</p>
+<p>D2 - SyncModoVentas=Reparto</p>
+<p>== Intermediacion (modelo Blasco-Il-lusions)</p>
+<ul class="simple">
+<li><p>D1 hace la venta y reparto, genera <strong>albaranes de intermediación de D2</strong></p></li>
+<li><p>D2 recibe la venta (bloqueada, liquidación cerrada) y genera albaranes y operación de cobro</p></li>
+<li><p>D1 recibe la venta generada y crea albarán resumen de intermediaciones</p></li>
+</ul>
+<p>En el proveedor D1 y D2 sincronizamos la forma de pago a contado, el resto de formas de pago se integraran
+como la forma de pago credito establecida en el proveedor D2.</p>
+<p>D1 - SyncModoVentas=IntermediacionLiquidacion</p>
+<p>D2 - SyncModoVentas=Intermediacion</p>
+<p>=== Configuración de los proveedores</p>
+<p>En <strong>RepartoLiquidacion</strong> y <strong>Intermediacion</strong> podemos generar la operacion de cobro para documentos
+con la forma de pago a contado:</p>
+<ul class="simple">
+<li><p>indicar en los dos proveedores, local y externo las formas de pago de contado y credito</p></li>
+<li><p>en la sincronización de venta los documentos con forma de pago a contado del proveedor externo
+indicamos forma de pago a contado del proveedor local</p></li>
+<li><p>documentos a contado se añaden a una operación de tesorería como cobro</p></li>
+</ul>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

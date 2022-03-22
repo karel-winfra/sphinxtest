@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>title: errores.md</p>
+<p>=== Errores</p>
+<p>== Errores en el procesamiento</p>
+<p>Todos los errores se presentan como un texto encima de la pantalla en que ocurrió el error.</p>
+<p>Aunque una pantalla presenta un error es posible trabajar con otra pantalla, ej. para revisar el dato indicado en el error.</p>
+<p>Si la aplicación indica un error la base de datos <strong>NO</strong> ha cambiado. Existen unas contadas excepciones, ej. si falla la facturación del mes, un proceso largo, todas las facturas ya emitidas se quedan.</p>
+<p>Winfra distingue dos niveles de fallos: avisos y errores.</p>
+<p>= Avisos para el usuario</p>
+<p>///winfra_ui/errores_usuario.png</p>
+<p>Avisa que winfra no puede seguir por razones</p>
+<ul class="simple">
+<li><p>de alguna regla interna - no se pueden eliminar almacenes con movimientos</p></li>
+<li><p>o por un error de usuario - fecha inexistente</p></li>
+</ul>
+<p>En ambos casos es el usuario que puede/debe resolver el problema.</p>
+<p>= Errores de fallos de conexión</p>
+<p>///winfra_ui/errores_conexion.png</p>
+<p>Los fallos de conexión pueden ser causados por des-conexión de los cables, fallos de Internet, o fallo del propio servidor de winfra.
+Para resolver problema de conexión hay que revisar la conexión, cerrar el error y volver a intentarlo.
+Winfra recupera fallos de conexión sin tener que salir de la pantalla y perder los cambios.</p>
+<p>= Errores internos de winfra</p>
+<p>///winfra_ui/errores_internos.png</p>
+<p>En caso de que ocurre un error interno hay que avisar el equipo de winfra.</p>
+<p>Utiliza los botones de <strong>Copiar el error</strong> o directamente <strong>Enviar el error</strong> para preparar un correo electrónico con el error.</p>
+<p>== Errores de validación</p>
+<p>///winfra_ui/errores_validacion.png</p>
+<p>Las pantallas suelen indicar los campos obligatorios para anticiparse a los errores en el proceso de guardar.</p>
+<p>No toda la validación es posible en la pantalla, sirve solo como ayuda visual para usuario. El servidor de la aplicación siempre vuelve a validar los datos.</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">winfradoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Conceptos de la interfaz de usuario</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Karel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/winfra_cliente/winfra_ui/errores.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
