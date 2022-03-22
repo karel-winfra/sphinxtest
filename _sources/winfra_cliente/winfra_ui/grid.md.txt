@@ -1,9 +1,8 @@
-title: grid.md
-=== Cuadrículas de datos
+# Cuadrículas de datos
 
 Cuadrículas son el principal método de visualización y modificación de datos.
 
-== Cuadrícula de visualización
+## Cuadrícula de visualización
 
 ///winfra_ui/grid_gridview.png
 
@@ -15,7 +14,7 @@ La ordenación se aplica a todos los resultados, no solo los que están visibles
  * Double-click o tecla Entrar activan el registro
  * Utiliza teclas Mayúscula y CTRL para selección múltiple de los registros
 
-== Cuadrícula de modificación
+## Cuadrícula de modificación
 
 ///winfra_ui/grid_datagrid.png
 
@@ -32,7 +31,7 @@ Teclas de modificación:
 
  !! Confirmar el registro con **Enter** pasa a siguiente registro. Confirmar con el **Tab** o **+** pasa a siguiente columna.
 
-== Cuadrícula con vínculos
+## Cuadrícula con vínculos
 
 ///winfra_ui/grid_datagrid_link.png
 
