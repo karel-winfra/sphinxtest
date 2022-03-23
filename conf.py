@@ -23,7 +23,10 @@ author = 'Karel'
 
 highlight_language = 'text'
 
-html_copy_source = False
+html_copy_source = True
+html_show_sourcelink = False
+html_show_sphinx = False
+html_show_copyright = False
 
 # -- General configuration ---------------------------------------------------
 
@@ -56,7 +59,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'venv', 'README.md']
 # a list of builtin themes.
 #
 html_theme = 'alabaster'
-# html_theme = 'bizstyle'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
