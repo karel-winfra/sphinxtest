@@ -1,17 +1,17 @@
-title: menu.md
-=== Menú principal
 
-== Composición de menú y búsqueda
+# Menú principal
 
-///winfra_ui/menu.png
+## Composición de menú y búsqueda
 
-== Configurar favoritos dentro del menú
+![](menu.png)
 
-///winfra_ui/menu_favoritos.png
+## Configurar favoritos dentro del menú
 
-== Buscar y eliminar favoritos del menú
+![](menu_favoritos.png)
 
-///winfra_ui/menu_favoritos_quitar.png
+## Buscar y eliminar favoritos del menú
+
+![](menu_favoritos_quitar.png)
 
  ! Los favoritos pueden aparecer al final del menú principal o incluidos dentro de un submenú.
  La opción esta configurable en la [c]pantalla de configuración|views/Ribera2.Shell.Views.ThemeConfigView.txt[c].

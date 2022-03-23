@@ -1,9 +1,9 @@
-title: Winfra3.Tpv.Views.Ventas.VentaTPVView.md
-=== Pantalla de venta del terminal TPV
+
+# Pantalla de venta del terminal TPV
 
 Utiliza la tecla **Esc** para situarse en la casilla de entrada de texto.
 
-== Distintas opciones de entrada de texto
+## Distintas opciones de entrada de texto
 
 * **'c' por delante** obtiene el cliente indicado. 'c' solo establece el cliente contado.
 

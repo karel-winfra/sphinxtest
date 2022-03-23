@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <title>Actualizar clientes entre dominios &#8212; documentación de winfradoc - </title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../../_static/translations.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Asignación directa" href="Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.html" />
+    <link rel="prev" title="Configuración de la sincronización" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -32,13 +34,14 @@
 
           <div class="body" role="main">
             
-  <p>title: Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.md</p>
-<p>=== Actualizar clientes entre dominios</p>
+  <section id="actualizar-clientes-entre-dominios">
+<h1>Actualizar clientes entre dominios<a class="headerlink" href="#actualizar-clientes-entre-dominios" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>La pantalla permite enlazar, copiar y crear nuevos cliente entre dos dominios.</p>
 <p>La operativa depende como esta configurada la conexión entre los dominios.
 El parámetro <strong>Actualizar clientes</strong> de la configuración.
 El dominio que permite actualizar clientes trae los clientes del dominio conectado y los enlaza o crea clientes en local.</p>
-<p>== Operaciones Actualizar clientes = Sí</p>
+<section id="operaciones-actualizar-clientes-si">
+<h2>Operaciones Actualizar clientes = Sí<a class="headerlink" href="#operaciones-actualizar-clientes-si" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><strong>Enlazar cliente</strong> - enlaza el cliente externo con el cliente para enlazar.
 El cliente para enlazar esta preseleccionado basándose en identificación fiscal, numero de referencia de proveedor o parecido del nombre.
 La columna de coincidencia indica la fiabilidad de la selección automática.</p>
@@ -49,7 +52,9 @@ Esta operación no es necesaria pero permite mantener los clientes actualizados.
 <p><strong>Crear condiciones</strong> - crea una nueva condición para el proveedor indicado en la configuración.
 Las condiciones se crean automáticamente al crear o enlazar el cliente.
 Esta operación es útil si añadimos segunda configuración y los clientes ya estan creados/enlazados.</p>
-<p>== Operaciones Actualizar clientes = No</p>
+</section>
+<section id="operaciones-actualizar-clientes-no">
+<h2>Operaciones Actualizar clientes = No<a class="headerlink" href="#operaciones-actualizar-clientes-no" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El dominio sirve como origen de los clientes - nunca los actualizamos aquí.</p>
 <p><strong>Copiar enlaces</strong> - copia los enlaces creados en el dominio remoto al dominio local. Esta operación se hace automáticamente al sincronizar la venta.
 Esto es útil para comprobar la configuración y diagnostico. No tiene uso una vez puesto en marcha.</p>
@@ -64,6 +69,8 @@ Pero cliente necesitan la condición de venta para el proveedor que esta configu
 <li><p>no tienen la condición del proveedor ya creada y activa (según las fecha de inicio y fin)</p></li>
 </ul>
 <p>Al dar de alta un nuevo cliente, es posible crear la condición de venta manualmente o volver o ejecutar esta operación.</p>
+</section>
+</section>
 
 
           </div>
@@ -83,15 +90,52 @@ Pero cliente necesitan la condición de venta para el proveedor que esta configu
 
 <h3>Navegación</h3>
 <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../puesta_en_marcha/index.html">GUIA BÁSICA DE WINFRA 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Indice de las pantallas</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.html">Claves de las incidencias de la venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView.html">Pedido global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.html">Configuración de la ruta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Personal.PersonalDetailsView.html">Configuración de la gestión de horarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.html">Configuración del apoyo comercial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Shell.Views.ThemeConfigView.html">Configuración de la aplicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.html">Integración con SAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.Audit.AuditWatchView.html">Monitor de auditoría</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVView.html">Pantalla de venta del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVExView.html">Pantalla de venta del terminal TPV Extendida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Terminales.TerminalConfigView.html">Configuración local del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.html">Perfil de transmisión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasImpresion.VentasPerfilesImpresionMainView.html">Configuración de los perfiles de impresión de venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentaMobile.MobileUserDetailView.html">Configuración del usuario móvil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.RappelTipos.RappelTiposMainView.html">Tipos de rappel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.html">Configuración de las cuentas de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Fabricantes.FabricanteDetailsView.html">Fabricante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.html">Gestión de las direcciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.html">Contadores de entregas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Articulos.ArticuloFormatoDetailsView.html">Artículo formato</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloConsumoImpuestos.ArticuloConsumoImpuestosView.html">Impuestos de artículo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.html">Centros de preparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html">Configuración de la sincronización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html#configuracion-de-los-proveedores">Configuración de los proveedores</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Actualizar clientes entre dominios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.html">Asignación directa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.PrintServiceConfigView.html">Configuración del servicio de impresión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.MailSenderView.html">Envío de documentos por correo electrónico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.CallTimerConsole.CallTimerConsoleView.html">Seguimiento de las conexiones</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Indice de las pantallas</a><ul>
+      <li>Previous: <a href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html" title="capítulo anterior">Configuración de la sincronización</a></li>
+      <li>Next: <a href="Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.html" title="próximo capítulo">Asignación directa</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

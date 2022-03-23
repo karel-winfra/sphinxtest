@@ -1,7 +1,7 @@
-title: Winfra3.Gestion.Views.Maestros.Fabricantes.FabricanteDetailsView.md
-=== Fabricante
 
-== Campos que inciden en el cálculo del precio medio ponderado
+# Fabricante
+
+## Campos que inciden en el cálculo del precio medio ponderado
 
  * **Días para cálculo PMP** indica el número de días atrás que utilizaremos para obtener las compras
  con las que calcular el precio medio (si existe un inventario con precio en el intervalo utilizamos la fecha

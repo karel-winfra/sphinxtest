@@ -1,7 +1,7 @@
-title: Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.md
-=== Configuración de la ruta
 
-== Cabecera de la ruta
+# Configuración de la ruta
+
+## Cabecera de la ruta
 
 Campos para tener en cuenta de la cabecera de la ruta:
 
@@ -25,13 +25,13 @@ Por ejemplo la ruta nocturna indica la tarifa nocturna.
 Al incluir el cliente en la ruta nocturna le aplicamos automáticamente esta tarifa aunque el cliente mismo esta configurado
 con la tarifa normal.
 
-== Configurar los puntos de venta de la ruta
+## Configurar los puntos de venta de la ruta
 
 La pestaña de **Elementos de la ruta** contiene dos lista
  * los puntos de venta incluidos en la ruta (a la izquierda)
  * resultados de la búsqueda de puntos de venta (a la derecha). Si un punto de venta ya esta en la ruta esta marcado en los resultados.
 
-= Frecuencia de visita
+### Frecuencia de visita
 
 Indica una frecuencia de visita de los clientes.
  * **Semanal** - visita cliente cada semana
@@ -42,7 +42,7 @@ Indica una frecuencia de visita de los clientes.
 Utilizar el numero de semana según el calendario ISO rompería la continuación al cambiar el año.
 Un año con 53 semanas (2015, 2020) tiene la ultima impar y la siguiente es numero 1, también impar.
 
-= Añadir y quitar los puntos de venta
+### Añadir y quitar los puntos de venta
 
 Utiliza flechas situadas entre las dos listas para incluir y excluir los puntos de venta.
 
@@ -59,7 +59,7 @@ Esto permite, por ejemplo, quitar puntos de venta de una población filtrando po
  * Pincha botón **Quitar puntos de venta**
 
 
-= Mover puntos de venta entre rutas
+### Mover puntos de venta entre rutas
 
 Mover los puntos de venta quita puntos de una ruta y los agrega a otra ruta.
 Esto es especialmente útil para rutas de reparto que no permiten que cliente este en dos a la vez.
@@ -69,7 +69,7 @@ Esto es especialmente útil para rutas de reparto que no permiten que cliente es
  * Pinchar botón **Traspasar**
  * Selecciona ruta de destino en el dialogo y pincha **Aceptar**
 
-= Incluir puntos de venta de otra ruta
+### Incluir puntos de venta de otra ruta
 
 Copia los clientes a nueva ruta pero los mantiene en la original
 
@@ -81,7 +81,7 @@ Copia los clientes a nueva ruta pero los mantiene en la original
  * Los resultados de la búsqueda son ordenados por orden de ruta
  * Selecciona los puntos de venta y pincha la flecha para incluir
 
-= Mantener orden de la ruta
+### Mantener orden de la ruta
 
 Tiene varia alternativas para ordenar la ruta
 

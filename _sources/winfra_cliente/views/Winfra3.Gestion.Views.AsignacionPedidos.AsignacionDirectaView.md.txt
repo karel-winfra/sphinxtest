@@ -1,5 +1,5 @@
-title: Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.md
-=== Asignación directa
+
+# Asignación directa
 
 Permite asignar los pedidos incluidos en las rutas geográficas directamente a los vehículos.
 

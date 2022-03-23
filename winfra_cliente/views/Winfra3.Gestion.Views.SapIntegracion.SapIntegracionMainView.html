@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <title>Integración con SAP &#8212; documentación de winfradoc - </title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../../_static/translations.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Monitor de auditoría" href="Ribera2.Facade.Views.Audit.AuditWatchView.html" />
+    <link rel="prev" title="Configuración de la aplicación" href="Ribera2.Shell.Views.ThemeConfigView.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -32,18 +34,21 @@
 
           <div class="body" role="main">
             
-  <p>title: Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.md</p>
-<p>=== Integración con SAP</p>
+  <section id="integracion-con-sap">
+<h1>Integración con SAP<a class="headerlink" href="#integracion-con-sap" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>La pantalla permite ejecutar y revisar la integración de la contabilidad con los servicio web
 del SAP BO.</p>
-<p>== Procesos</p>
+<section id="procesos">
+<h2>Procesos<a class="headerlink" href="#procesos" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>Pre-validar las ventas, compras, facturas globales y el resto de contabilidad para generar
 registros que enlazaran el documento de winfra con el documento de SAP</p></li>
 <li><p>Revisar posibles errores de la pre-validación y volver a pre-validar</p></li>
 <li><p>Enviar a SAP</p></li>
 </ul>
-<p>== Estados de los registros</p>
+</section>
+<section id="estados-de-los-registros">
+<h2>Estados de los registros<a class="headerlink" href="#estados-de-los-registros" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Pendiente</strong> - el registro ha sido pre-validado y esta pendiente de de enviar</p></li>
 <li><p><strong>PendienteAviso</strong> - pre-validado con algún aviso (no hay que hacer nada) - ej.: se va a dar de alta el cliente</p></li>
@@ -53,7 +58,9 @@ registros que enlazaran el documento de winfra con el documento de SAP</p></li>
 <li><p><strong>Error</strong> - la integración en SAP ha fallado</p></li>
 </ul>
 <p>Ademas de los estados el registro puede bloquear el envío (indica una cerradura).</p>
-<p>== Notas</p>
+</section>
+<section id="notas">
+<h2>Notas<a class="headerlink" href="#notas" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El proceso de envió solo envía registros pre-validados <strong>Pendiente</strong> y <strong>PendienteAviso</strong>
 en el orden de serie/numero y finaliza en el primer registro <strong>PendienteError</strong> o <strong>Error</strong> o en un registro bloqueado.
 No continua después de error para no crear huecos en las series de SAP.</p>
@@ -65,7 +72,9 @@ Si el problema esta en Winfra y hay que modificar cliente/venta etc.
 Hay que eliminar el registro primero (esta protegido para evitar modificación) y luego volver a pre-validar.</p>
 <p>Los errores es posible tirar atrás y volver a enviar con el botón <strong>Marcar pendiente</strong>.</p>
 <p>Los registros <strong>Revisar</strong> es posible pasar a <strong>Correcto</strong> con el botón <strong>Marcar correcto</strong></p>
-<p>Los registros <strong>Correcto</strong> no salen por defecto en la pantalla. Para verlos hay que filtrar todos los estados e:[]*[]</p>
+<p>Los registros <strong>Correcto</strong> no salen por defecto en la pantalla. Para verlos hay que filtrar todos los estados e:*</p>
+</section>
+</section>
 
 
           </div>
@@ -85,15 +94,52 @@ Hay que eliminar el registro primero (esta protegido para evitar modificación) 
 
 <h3>Navegación</h3>
 <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../puesta_en_marcha/index.html">GUIA BÁSICA DE WINFRA 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Indice de las pantallas</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.html">Claves de las incidencias de la venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView.html">Pedido global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.html">Configuración de la ruta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Personal.PersonalDetailsView.html">Configuración de la gestión de horarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.html">Configuración del apoyo comercial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Shell.Views.ThemeConfigView.html">Configuración de la aplicación</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Integración con SAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.Audit.AuditWatchView.html">Monitor de auditoría</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVView.html">Pantalla de venta del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVExView.html">Pantalla de venta del terminal TPV Extendida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Terminales.TerminalConfigView.html">Configuración local del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.html">Perfil de transmisión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasImpresion.VentasPerfilesImpresionMainView.html">Configuración de los perfiles de impresión de venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentaMobile.MobileUserDetailView.html">Configuración del usuario móvil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.RappelTipos.RappelTiposMainView.html">Tipos de rappel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.html">Configuración de las cuentas de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Fabricantes.FabricanteDetailsView.html">Fabricante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.html">Gestión de las direcciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.html">Contadores de entregas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Articulos.ArticuloFormatoDetailsView.html">Artículo formato</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloConsumoImpuestos.ArticuloConsumoImpuestosView.html">Impuestos de artículo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.html">Centros de preparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html">Configuración de la sincronización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html#configuracion-de-los-proveedores">Configuración de los proveedores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.html">Actualizar clientes entre dominios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.html">Asignación directa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.PrintServiceConfigView.html">Configuración del servicio de impresión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.MailSenderView.html">Envío de documentos por correo electrónico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.CallTimerConsole.CallTimerConsoleView.html">Seguimiento de las conexiones</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Indice de las pantallas</a><ul>
+      <li>Previous: <a href="Ribera2.Shell.Views.ThemeConfigView.html" title="capítulo anterior">Configuración de la aplicación</a></li>
+      <li>Next: <a href="Ribera2.Facade.Views.Audit.AuditWatchView.html" title="próximo capítulo">Monitor de auditoría</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

@@ -1,16 +1,16 @@
-title: Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.md
-=== Gestión de las direcciones
+
+# Gestión de las direcciones
 
 Pantalla de utilidades que permite búsqueda, localización y actualización de las direcciones.
 
-== Operaciones
+## Operaciones
 
  * **Geolocalizar** utiliza los servicios de Google Maps para validar las direcciones seleccionadas
 y buscar sus coordenadas geográficas.
  * **Actualizar** la dirección. Una vez la dirección ha sido geolocalizada la operacion actualiza la calle,
 numero y código postal tal como lo ha localizado Google Maps.
 
-== Datos de las direcciones
+## Datos de las direcciones
 
  * **Enlace** muestra de quien es la dirección. Las primeras letras indican el tipo: P - proveedor, A - acreedor,
 PV - punto de venta, IF - identificación fiscal
@@ -21,7 +21,7 @@ Al **actualizar** la dirección estos datos se van a copiar a los campos Vía, N
 el tipo de dirección es **street_address**. Si solo se encuentra el pueblo la dirección es **locality** etc.
 Puede filtrar y ordenar los tipos de localización. La lista de tipos esta a continuación.
 
-== Tipos de localización y componentes de las direcciones
+## Tipos de localización y componentes de las direcciones
 
 Esto es la lista de tipos desde la documentación de Google Maps.
 

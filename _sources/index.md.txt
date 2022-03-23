@@ -12,5 +12,7 @@ Mas sobre **Winfra** esta en [winfra.es](http://www.winfra.es).
 :caption: "Contenido:"
 
 about_us
+puesta_en_marcha/index
 winfra_cliente/winfra_ui/index
+winfra_cliente/views/index
 ```

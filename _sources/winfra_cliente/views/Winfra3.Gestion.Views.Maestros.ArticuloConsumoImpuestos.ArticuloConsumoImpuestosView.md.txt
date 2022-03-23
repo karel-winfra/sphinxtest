@@ -1,5 +1,5 @@
-title: Winfra3.Gestion.Views.Maestros.ArticuloConsumoImpuestos.ArticuloConsumoImpuestosView.md
-=== Impuestos de artículo
+
+# Impuestos de artículo
 
 Permite indicar los impuestos para un artículo.
 

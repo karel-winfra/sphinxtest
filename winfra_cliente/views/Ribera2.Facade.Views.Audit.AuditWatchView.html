@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <title>Monitor de auditoría &#8212; documentación de winfradoc - </title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../../_static/translations.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Pantalla de venta del terminal TPV" href="Winfra3.Tpv.Views.Ventas.VentaTPVView.html" />
+    <link rel="prev" title="Integración con SAP" href="Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -32,17 +34,20 @@
 
           <div class="body" role="main">
             
-  <p>title: Ribera2.Facade.Views.Audit.AuditWatchView.md
-Category: Winfra3 Windows</p>
-<p>=== Monitor de auditoría</p>
+  <p>Category: Winfra3 Windows</p>
+<section id="monitor-de-auditoria">
+<h1>Monitor de auditoría<a class="headerlink" href="#monitor-de-auditoria" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Permite configurar los filtros y envía avisos por email cuando ocurran eventos en la auditoría de winfra.</p>
-<p>== Configuración de los envíos</p>
+<section id="configuracion-de-los-envios">
+<h2>Configuración de los envíos<a class="headerlink" href="#configuracion-de-los-envios" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>Configurar cuenta de correo en la pantalla de las [c]cuentas|views/Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.txt[c]</p></li>
 <li><p>Indica la cuenta de correo que quiere utilizar en datos generales <strong>Configuración de correo para envío de los avisos del monitor auditoria</strong></p></li>
 <li><p>Configura el proceso de <strong>Monitor de auditoría</strong> en el programador de las tareas.</p></li>
 </ul>
-<p>== Configuración de los filtros</p>
+</section>
+<section id="configuracion-de-los-filtros">
+<h2>Configuración de los filtros<a class="headerlink" href="#configuracion-de-los-filtros" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Habilitado</strong> - permite habilitar/deshabilitar el aviso</p></li>
 <li><p><strong>Operación</strong> - filtrar nombre de la operación</p></li>
@@ -51,11 +56,13 @@ Category: Winfra3 Windows</p>
 <li><p><strong>Usuario</strong> - filtrar por usuario</p></li>
 </ul>
 <p>El aviso se envía si el registro cumple con todos los filtros indicados. Si el filtro esta vacío no opera.
-Puede utilizar []*[] como comodín.</p>
+Puede utilizar * como comodín.</p>
 <p>Tiene que indicar por lo menos un filtro.</p>
 <ul class="simple">
 <li><p><strong>Email</strong> - indica el email al que hay que enviar el informe. Puede indicar varios separados por punto-coma.</p></li>
 </ul>
+</section>
+</section>
 
 
           </div>
@@ -75,15 +82,52 @@ Puede utilizar []*[] como comodín.</p>
 
 <h3>Navegación</h3>
 <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../puesta_en_marcha/index.html">GUIA BÁSICA DE WINFRA 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Indice de las pantallas</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.html">Claves de las incidencias de la venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView.html">Pedido global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.html">Configuración de la ruta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Personal.PersonalDetailsView.html">Configuración de la gestión de horarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.html">Configuración del apoyo comercial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Shell.Views.ThemeConfigView.html">Configuración de la aplicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.html">Integración con SAP</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Monitor de auditoría</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVView.html">Pantalla de venta del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVExView.html">Pantalla de venta del terminal TPV Extendida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Terminales.TerminalConfigView.html">Configuración local del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.html">Perfil de transmisión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasImpresion.VentasPerfilesImpresionMainView.html">Configuración de los perfiles de impresión de venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentaMobile.MobileUserDetailView.html">Configuración del usuario móvil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.RappelTipos.RappelTiposMainView.html">Tipos de rappel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.html">Configuración de las cuentas de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Fabricantes.FabricanteDetailsView.html">Fabricante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.html">Gestión de las direcciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.html">Contadores de entregas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Articulos.ArticuloFormatoDetailsView.html">Artículo formato</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloConsumoImpuestos.ArticuloConsumoImpuestosView.html">Impuestos de artículo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.html">Centros de preparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html">Configuración de la sincronización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html#configuracion-de-los-proveedores">Configuración de los proveedores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.html">Actualizar clientes entre dominios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.html">Asignación directa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.PrintServiceConfigView.html">Configuración del servicio de impresión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.MailSenderView.html">Envío de documentos por correo electrónico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.CallTimerConsole.CallTimerConsoleView.html">Seguimiento de las conexiones</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Indice de las pantallas</a><ul>
+      <li>Previous: <a href="Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.html" title="capítulo anterior">Integración con SAP</a></li>
+      <li>Next: <a href="Winfra3.Tpv.Views.Ventas.VentaTPVView.html" title="próximo capítulo">Pantalla de venta del terminal TPV</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

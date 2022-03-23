@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <title>Configuración de la gestión de horarios &#8212; documentación de winfradoc - </title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../../_static/translations.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Configuración del apoyo comercial" href="Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.html" />
+    <link rel="prev" title="Configuración de la ruta" href="Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -32,34 +34,49 @@
 
           <div class="body" role="main">
             
-  <p>title: Winfra3.Gestion.Views.Maestros.Personal.PersonalDetailsView.md</p>
-<p>=== Configuración de la gestión de horarios</p>
-<p>== Posibles acciones en función del tipo de personal para el que queramos calcular horarios</p>
-<p>= Personal de administración (oficina)
-- Tipo de cálculo = Fijo
+  <section id="configuracion-de-la-gestion-de-horarios">
+<h1>Configuración de la gestión de horarios<a class="headerlink" href="#configuracion-de-la-gestion-de-horarios" title="Enlazar permanentemente con este título">¶</a></h1>
+<section id="posibles-acciones-en-funcion-del-tipo-de-personal-para-el-que-queramos-calcular-horarios">
+<h2>Posibles acciones en función del tipo de personal para el que queramos calcular horarios<a class="headerlink" href="#posibles-acciones-en-funcion-del-tipo-de-personal-para-el-que-queramos-calcular-horarios" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="personal-de-administracion-oficina">
+<h3>Personal de administración (oficina)<a class="headerlink" href="#personal-de-administracion-oficina" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Tipo de cálculo = Fijo
 - Se indican las horas de inicio y fin de cada turno.
-- Primer turno es por la mañana y segundo turno es por la tarde</p>
-<p>= Personal comercial
-- Tipo de cálculo = Calcular sobre acción
+- Primer turno es por la mañana y segundo turno es por la tarde
+</pre></div>
+</div>
+</section>
+<section id="personal-comercial">
+<h3>Personal comercial<a class="headerlink" href="#personal-comercial" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Tipo de cálculo = Calcular sobre acción
 - Cálculo hora de inicio = Hora inicio tempómetro
 - Cálculo hora finalización = Hora finalización tempómetro
 - Posibles correcciones al tempómetro
-○ Si indicamos Hora inicio jornada desde, se tendrá en cuenta el primer registro del tempómetro posterior a esta
-○ Si indicamos Hora fin jornada desde, se tendrá en cuenta el último registro del tempómetro anterior a esta
-○ Hora inicio jornada hasta y Hora fin jornada hasta, no se usan en este cálculo</p>
-<p>= Personal de reparto
-- Tipo de cálculo = Calcular sobre acción
+    ○ Si indicamos Hora inicio jornada desde, se tendrá en cuenta el primer registro del tempómetro posterior a esta
+    ○ Si indicamos Hora fin jornada desde, se tendrá en cuenta el último registro del tempómetro anterior a esta
+    ○ Hora inicio jornada hasta y Hora fin jornada hasta, no se usan en este cálculo
+</pre></div>
+</div>
+</section>
+<section id="personal-de-reparto">
+<h3>Personal de reparto<a class="headerlink" href="#personal-de-reparto" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Tipo de cálculo = Calcular sobre acción
 - Cálculo hora inicio. Posibles valores
-○ Hora inicio jornada = Hora inicio jornada desde que indiquemos
-○ Hora inicio tempómetro de visitas = no se usa
-○ Hora confirmación carga = Inicia cuando se confirma la hoja de carga
-○ Hora inicio ruta = solo para reparto mecanizado, cuando ejecutan la acción de iniciar ruta
+    ○ Hora inicio jornada = Hora inicio jornada desde que indiquemos
+    ○ Hora inicio tempómetro de visitas = no se usa
+    ○ Hora confirmación carga = Inicia cuando se confirma la hoja de carga
+    ○ Hora inicio ruta = solo para reparto mecanizado, cuando ejecutan la acción de iniciar ruta
 - Cálculo hora finalización. Posibles valores
-○ Hora retorno carga = hora en la que se hace el retorno de la hoja de carga
-○ Hora liquidación tesorería = hora en que se asigna el operador de tesorería a la operación de tesorería
-○ Hora liquidación reparto = hora en que se genera la liquidación de la hoja de entrada del reparto
-○ Hora finalización tempómetro de visitas = no se usa
-○ Hora finalización ruta = solo para reparto mecanizado, cuando ejecutan la acción de finalizar ruta</p>
+    ○ Hora retorno carga = hora en la que se hace el retorno de la hoja de carga
+    ○ Hora liquidación tesorería = hora en que se asigna el operador de tesorería a la operación de tesorería
+    ○ Hora liquidación reparto = hora en que se genera la liquidación de la hoja de entrada del reparto
+    ○ Hora finalización tempómetro de visitas = no se usa
+    ○ Hora finalización ruta = solo para reparto mecanizado, cuando ejecutan la acción de finalizar ruta
+</pre></div>
+</div>
+</section>
+</section>
+</section>
 
 
           </div>
@@ -79,15 +96,52 @@
 
 <h3>Navegación</h3>
 <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../puesta_en_marcha/index.html">GUIA BÁSICA DE WINFRA 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Indice de las pantallas</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.html">Claves de las incidencias de la venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView.html">Pedido global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.html">Configuración de la ruta</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuración de la gestión de horarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.html">Configuración del apoyo comercial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Shell.Views.ThemeConfigView.html">Configuración de la aplicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.html">Integración con SAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.Audit.AuditWatchView.html">Monitor de auditoría</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVView.html">Pantalla de venta del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVExView.html">Pantalla de venta del terminal TPV Extendida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Terminales.TerminalConfigView.html">Configuración local del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.html">Perfil de transmisión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasImpresion.VentasPerfilesImpresionMainView.html">Configuración de los perfiles de impresión de venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentaMobile.MobileUserDetailView.html">Configuración del usuario móvil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.RappelTipos.RappelTiposMainView.html">Tipos de rappel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.html">Configuración de las cuentas de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Fabricantes.FabricanteDetailsView.html">Fabricante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.html">Gestión de las direcciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.html">Contadores de entregas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Articulos.ArticuloFormatoDetailsView.html">Artículo formato</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloConsumoImpuestos.ArticuloConsumoImpuestosView.html">Impuestos de artículo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.html">Centros de preparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html">Configuración de la sincronización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.html#configuracion-de-los-proveedores">Configuración de los proveedores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.html">Actualizar clientes entre dominios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.html">Asignación directa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.PrintServiceConfigView.html">Configuración del servicio de impresión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.MailSenderView.html">Envío de documentos por correo electrónico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.CallTimerConsole.CallTimerConsoleView.html">Seguimiento de las conexiones</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Indice de las pantallas</a><ul>
+      <li>Previous: <a href="Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.html" title="capítulo anterior">Configuración de la ruta</a></li>
+      <li>Next: <a href="Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.html" title="próximo capítulo">Configuración del apoyo comercial</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

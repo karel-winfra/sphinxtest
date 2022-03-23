@@ -1,19 +1,19 @@
-title: view.md
-=== Pantalla actual de trabajo
 
-== Composición de la zona de trabajo
+# Pantalla actual de trabajo
 
-///winfra_ui/view1.png
+## Composición de la zona de trabajo
 
-///winfra_ui/view2.png
+![](view1.png)
 
-== Dos zonas de trabajo abiertas en paralelo
+![](view2.png)
 
-///winfra_ui/view_paralelo.png
+## Dos zonas de trabajo abiertas en paralelo
 
-== Ayuda integrada en las pantallas
+![](view_paralelo.png)
 
-///winfra_ui/view_ayuda.png
+## Ayuda integrada en las pantallas
+
+![](view_ayuda.png)
 
 Si existe una ayuda integrada especifica para la pantalla abierta
 aparece un botón de acceso a lado del icono de fijar la pantalla.

@@ -1,7 +1,7 @@
-title: Ribera2.Facade.Views.CallTimerConsole.CallTimerConsoleView.md
-=== Seguimiento de las conexiones
 
-== Conexiones locales
+# Seguimiento de las conexiones
+
+## Conexiones locales
 
 Muestra en tiempo real el trafico de datos entre el cliente y servidor.
 El ultimo comando ejecutado aparece como primero en la lista.
@@ -32,7 +32,7 @@ re-intenta la comunicación (estados http ConnectFailure, ConnectionClosed, Keep
  ! No esta incluido en los tiempos la codificación/decodificación de los datos (json encode/decode) en el cliente y la actualización de la pantalla.
 En caso de listados y cuadriculas con muchos registros puede ser significante, pero depende solamente del rendimiento del ordenador del cliente.
 
-== Actividad de servidor
+## Actividad de servidor
 
 Muestra el gráfico de peticiones servidas por el servidor para todos los usuarios (no tiene en cuenta las tareas como informes etc.).
 

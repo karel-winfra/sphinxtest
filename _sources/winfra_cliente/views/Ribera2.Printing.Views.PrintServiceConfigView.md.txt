@@ -1,12 +1,12 @@
-title: Ribera2.Printing.Views.PrintServiceConfigView.md
-=== Configuración del servicio de impresión
+
+# Configuración del servicio de impresión
 
 Permite configurar el servicio de impresión - enlace entre las colas de winfra y las colas de windows instaladas en la maquina.
 
 La configuración permite configurar múltiples colas de winfra con una o varias colas de windows.
 La cola de winfra solo puede aparecer una vez.
 
-== Configuración de servicio
+## Configuración de servicio
 
  * **Habilitar impresión** - indica si la impresión esta habilitada. Sirve para poder parar la impresión del servicio por completo.
  * **Intervalo** - intervalo en segundos entre las comprobaciones de la cola.
@@ -15,14 +15,14 @@ La cola de winfra solo puede aparecer una vez.
 Por lo tanto, el intervalo es el máximo tiempo entre agregar un nuevo documento a la cola y el inicio de la impresión.
 Si el tiempo es demasiado corto (menor que 15 segundos) puede sobrecargar el equipo de servidor.
 
-== Inicio de sesión automático
+## Inicio de sesión automático
 
 Permite configurar un usuario y contraseña para iniciar la sesión automáticamente después de lanzar la aplicación.
 Si el inicio no esta configurado hay que logearse para poder imprimir.
 
  !! Para el inicio automático hay que utilizar usuario solo con la rol **Impresora** para evitar acceso a otras partes de la aplicación.
 
-== Colas de impresión
+## Colas de impresión
 
 Añade la configuración de la cola de winfra y su correspondiente cola de windows o puerto de serie.
 

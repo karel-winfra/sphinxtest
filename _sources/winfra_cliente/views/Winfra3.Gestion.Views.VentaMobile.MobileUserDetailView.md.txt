@@ -1,9 +1,9 @@
-title: Winfra3.Gestion.Views.VentaMobile.MobileUserDetailView.md
-=== Configuración del usuario móvil
+
+# Configuración del usuario móvil
 
 Permite configurar el usuario para la aplicación de ventas en los dispositivos móviles
 
-== Campos
+## Campos
  * **Personal** - indica el personal relacionado - vendedor o repartidor
  * **Nombre** - nombre o descripción tal como aparece en el dispositivo móvil
  * **Tipo** - el tipo de operativa del dispositivo
@@ -16,7 +16,7 @@ Permite configurar el usuario para la aplicación de ventas en los dispositivos 
  * **Rutas de reparto** - Solo aplicable a tipo **Venta**.
  Indica las rutas de reparto relacionadas con el vendedor.
 
-== Tipos de operativa
+## Tipos de operativa
  * **Venta** - la carga preparada incluye todas las rutas de venta donde el usuario esta como responsable.
  Los pedidos descargados se incorporan como nuevos documentos.
  * **Reparto** - la carga preparada incluye los viajes finalizados del repartidor, los clientes y documentos incluidos

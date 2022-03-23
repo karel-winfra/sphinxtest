@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; documentación de winfradoc - </title>
+    <title>Configuración de la sincronización &#8212; documentación de winfradoc - </title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script src="../../_static/translations.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Actualizar clientes entre dominios" href="Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.html" />
+    <link rel="prev" title="Centros de preparación" href="Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -32,10 +34,11 @@
 
           <div class="body" role="main">
             
-  <p>title: Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.md</p>
-<p>=== Configuración de la sincronización</p>
+  <section id="configuracion-de-la-sincronizacion">
+<h1>Configuración de la sincronización<a class="headerlink" href="#configuracion-de-la-sincronizacion" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Configurar la conexión a otro dominio para traer la venta y sincronizar los maestros.</p>
-<p>== Estadística de venta (modelo Leondis-Reycer)</p>
+<section id="estadistica-de-venta-modelo-leondis-reycer">
+<h2>Estadística de venta (modelo Leondis-Reycer)<a class="headerlink" href="#estadistica-de-venta-modelo-leondis-reycer" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>D1 genera albarán o factura directa (una venta)</p></li>
 <li><p>D2 recibe las ventas y genera documento estadístico</p></li>
@@ -47,7 +50,9 @@ pero D2 tiene que transmitir esta información al proveedor.</p>
 cargas pero si transmisible a proveedores.</p>
 <p>D1 - SyncModoVentas=Ninguno</p>
 <p>D2 - SyncModoVentas=Estadistica</p>
-<p>== Venta externa (modelo Provea-Discamt)</p>
+</section>
+<section id="venta-externa-modelo-provea-discamt">
+<h2>Venta externa (modelo Provea-Discamt)<a class="headerlink" href="#venta-externa-modelo-provea-discamt" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>D1 hace una venta pero genera documento estadístico</p></li>
 <li><p>D2 recibe las ventas, genera albarán o factura directa para la entrega</p></li>
@@ -62,7 +67,9 @@ que tener la condición de la venta del proveedor enlazado indicando <strong>Alb
 comisiones de los vendedores.</p>
 <p>D1 - SyncModoVentas=VentaExternaLiquidacion</p>
 <p>D2 - SyncModoVentas=VentaExterna</p>
-<p>== Reparto (modelo Sedinte-Dispegra)</p>
+</section>
+<section id="reparto-modelo-sedinte-dispegra">
+<h2>Reparto (modelo Sedinte-Dispegra)<a class="headerlink" href="#reparto-modelo-sedinte-dispegra" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>D1 crea un pedido (o lo recibe desde el fabricante como Pepsi, Schweppes)</p></li>
 <li><p>D2 recibe el pedido y genera <strong>albaran de intermediacion de D1</strong></p></li>
@@ -72,7 +79,9 @@ comisiones de los vendedores.</p>
 como la forma de pago credito establecida en el proveedor D2.</p>
 <p>D1 - SyncModoVentas=RepartoLiquidacion</p>
 <p>D2 - SyncModoVentas=Reparto</p>
-<p>== Intermediacion (modelo Blasco-Il-lusions)</p>
+</section>
+<section id="intermediacion-modelo-blasco-il-lusions">
+<h2>Intermediacion (modelo Blasco-Il-lusions)<a class="headerlink" href="#intermediacion-modelo-blasco-il-lusions" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>D1 hace la venta y reparto, genera <strong>albaranes de intermediación de D2</strong></p></li>
 <li><p>D2 recibe la venta (bloqueada, liquidación cerrada) y genera albaranes y operación de cobro</p></li>
@@ -82,7 +91,10 @@ como la forma de pago credito establecida en el proveedor D2.</p>
 como la forma de pago credito establecida en el proveedor D2.</p>
 <p>D1 - SyncModoVentas=IntermediacionLiquidacion</p>
 <p>D2 - SyncModoVentas=Intermediacion</p>
-<p>=== Configuración de los proveedores</p>
+</section>
+</section>
+<section id="configuracion-de-los-proveedores">
+<h1>Configuración de los proveedores<a class="headerlink" href="#configuracion-de-los-proveedores" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En <strong>RepartoLiquidacion</strong> y <strong>Intermediacion</strong> podemos generar la operacion de cobro para documentos
 con la forma de pago a contado:</p>
 <ul class="simple">
@@ -91,6 +103,7 @@ con la forma de pago a contado:</p>
 indicamos forma de pago a contado del proveedor local</p></li>
 <li><p>documentos a contado se añaden a una operación de tesorería como cobro</p></li>
 </ul>
+</section>
 
 
           </div>
@@ -110,15 +123,52 @@ indicamos forma de pago a contado del proveedor local</p></li>
 
 <h3>Navegación</h3>
 <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../about_us.html">Acerca de Winfra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../puesta_en_marcha/index.html">GUIA BÁSICA DE WINFRA 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../winfra_ui/index.html">Conceptos de la interfaz de usuario</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Indice de las pantallas</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.html">Claves de las incidencias de la venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView.html">Pedido global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.html">Configuración de la ruta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Personal.PersonalDetailsView.html">Configuración de la gestión de horarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.html">Configuración del apoyo comercial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Shell.Views.ThemeConfigView.html">Configuración de la aplicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.html">Integración con SAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.Audit.AuditWatchView.html">Monitor de auditoría</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVView.html">Pantalla de venta del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Ventas.VentaTPVExView.html">Pantalla de venta del terminal TPV Extendida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Tpv.Views.Terminales.TerminalConfigView.html">Configuración local del terminal TPV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.html">Perfil de transmisión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentasImpresion.VentasPerfilesImpresionMainView.html">Configuración de los perfiles de impresión de venta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.VentaMobile.MobileUserDetailView.html">Configuración del usuario móvil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.RappelTipos.RappelTiposMainView.html">Tipos de rappel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.html">Configuración de las cuentas de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Fabricantes.FabricanteDetailsView.html">Fabricante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Direcciones.DireccionesMainView.html">Gestión de las direcciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.html">Contadores de entregas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.Articulos.ArticuloFormatoDetailsView.html">Artículo formato</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloConsumoImpuestos.ArticuloConsumoImpuestosView.html">Impuestos de artículo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.html">Centros de preparación</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuración de la sincronización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuracion-de-los-proveedores">Configuración de los proveedores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.html">Actualizar clientes entre dominios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Winfra3.Gestion.Views.AsignacionPedidos.AsignacionDirectaView.html">Asignación directa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.PrintServiceConfigView.html">Configuración del servicio de impresión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Printing.Views.MailSenderView.html">Envío de documentos por correo electrónico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ribera2.Facade.Views.CallTimerConsole.CallTimerConsoleView.html">Seguimiento de las conexiones</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Indice de las pantallas</a><ul>
+      <li>Previous: <a href="Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.html" title="capítulo anterior">Centros de preparación</a></li>
+      <li>Next: <a href="Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.html" title="próximo capítulo">Actualizar clientes entre dominios</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

@@ -1,5 +1,5 @@
-title: Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView.md
-=== Claves de las incidencias de la venta
+
+# Claves de las incidencias de la venta
 
 La pantalla permite codificar las incidencias relacionadas con el documento de la venta.
 
@@ -8,7 +8,7 @@ Las incidencias tipo **Generica** se pueden agregar manualmente en el documento 
 
 En todos los procesos el usuario puede hacer un comentario ademas de indicar la clave.
 
-== Campos de las claves para tener en cuenta
+## Campos de las claves para tener en cuenta
 
  * **Referencia del fabricante** es una codificacion de la incidencia para el proveedor/fabricante.
 Esto se utiliza para indicar razones de anulacion en las transmisiones de proveedores.
@@ -20,7 +20,7 @@ e intermediaciones de los proveedores que no tengan definidas las claves.
 Solo deberia existir una clave de tipo **Rechazo**. Tiene que existir al menos una clave de **Anulación**.
  * **Accion** se aplica despues de anulación.
 
-= Acciones
+### Acciones
 
 Las acciones se aplican despues de la anulación del documento.
 

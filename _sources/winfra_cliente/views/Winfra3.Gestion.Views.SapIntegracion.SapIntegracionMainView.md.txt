@@ -1,17 +1,17 @@
-title: Winfra3.Gestion.Views.SapIntegracion.SapIntegracionMainView.md
-=== Integración con SAP
+
+# Integración con SAP
 
 La pantalla permite ejecutar y revisar la integración de la contabilidad con los servicio web
 del SAP BO.
 
-== Procesos
+## Procesos
 
  * Pre-validar las ventas, compras, facturas globales y el resto de contabilidad para generar
 registros que enlazaran el documento de winfra con el documento de SAP
  * Revisar posibles errores de la pre-validación y volver a pre-validar
  * Enviar a SAP
 
-== Estados de los registros
+## Estados de los registros
 
  * **Pendiente** - el registro ha sido pre-validado y esta pendiente de de enviar
  * **PendienteAviso** - pre-validado con algún aviso (no hay que hacer nada) - ej.: se va a dar de alta el cliente
@@ -22,7 +22,7 @@ registros que enlazaran el documento de winfra con el documento de SAP
 
 Ademas de los estados el registro puede bloquear el envío (indica una cerradura).
 
-== Notas
+## Notas
 
 El proceso de envió solo envía registros pre-validados **Pendiente** y **PendienteAviso**
 en el orden de serie/numero y finaliza en el primer registro **PendienteError** o **Error** o en un registro bloqueado.
@@ -40,4 +40,4 @@ Los errores es posible tirar atrás y volver a enviar con el botón **Marcar pen
 
 Los registros **Revisar** es posible pasar a **Correcto** con el botón **Marcar correcto**
 
-Los registros **Correcto** no salen por defecto en la pantalla. Para verlos hay que filtrar todos los estados e:[]*[]
+Los registros **Correcto** no salen por defecto en la pantalla. Para verlos hay que filtrar todos los estados e:\*
