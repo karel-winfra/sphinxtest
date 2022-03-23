@@ -1,16 +1,16 @@
-title: Winfra3.Gestion.Views.VentasTransmisiones.TransmisionDetailsView.md
-=== Perfil de transmisión
+
+# Perfil de transmisión
 
 Permite configurar el envío y recepción de los datos a los proveedores
 
  * **Tipo** identifica el modulo de comunicación
  * **Proveedor** indica el proveedor
 
-== Datos generales
+## Datos generales
 
 Datos de configuración del modulo de transmisión. Los datos dependen del tipo de transmisión seleccionada.
 
-== Datos control
+## Datos control
 
  * **Transmisión automática** marca la opción para enviar los datos en una transmisión automática por la noche
  !! No todos los proveedores tienen la opción de envío automático.

@@ -1,5 +1,5 @@
-title: Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.md
-=== Contadores de entregas
+
+# Contadores de entregas
 
 Define un contador para acumular la venta realizada al cliente.
 Cada contador suma las caja de cargo y de regalo por separado.
@@ -7,7 +7,7 @@ Contador permite definir el regalo máximo o en relación con cargo para avisar 
 
 Los contadores están definidos por cliente.
 
-== Configuración del contador
+## Configuración del contador
  * **Activo** - Indica si el contador esta activo (acumula los cargos y regalos).
  !! La búsqueda por defecto solo muestra los contadores activos. Utiliza parámetro **b:** para ver todos los contadores
 
@@ -26,7 +26,7 @@ La campaña es opcional.
  * **Cargo acumulado** - la cantidad total de cargo incluida en el contador
  * **Regalo acumulado** - la cantidad total de regalo incluida en el contador
 
-== Aviso en la linea de venta
+## Aviso en la linea de venta
 
 En caso de cargo igual a **0** el aviso indica la cantidad de regalo que queda por entregar.
  ! regalo disponible = regalo - regalo acumulado
@@ -35,7 +35,7 @@ En caso de cargo mayor que **0** el aviso indica la cantidad de cargo para el si
  ! regalo aplicable = redondear_abajo(cargo acumulado / cargo) * regalo
  ! regalo disponible = regalo aplicable - regalo acumulado
 
-== Contador aplicable
+## Contador aplicable
 
 Winfra selecciona el contador filtrando el cliente y la fecha de documento. Solo selecciona los contadores activos.
 

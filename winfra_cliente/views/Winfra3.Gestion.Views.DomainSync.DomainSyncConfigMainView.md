@@ -1,10 +1,10 @@
-title: Winfra3.Gestion.Views.DomainSync.DomainSyncConfigMainView.md
-=== Configuración de la sincronización
+
+# Configuración de la sincronización
 
 Configurar la conexión a otro dominio para traer la venta y sincronizar los maestros.
 
 
-== Estadística de venta (modelo Leondis-Reycer)
+## Estadística de venta (modelo Leondis-Reycer)
 
  * D1 genera albarán o factura directa (una venta)
  * D2 recibe las ventas y genera documento estadístico
@@ -21,7 +21,7 @@ D1 - SyncModoVentas=Ninguno
 D2 - SyncModoVentas=Estadistica
 
 
-== Venta externa (modelo Provea-Discamt)
+## Venta externa (modelo Provea-Discamt)
 
  * D1 hace una venta pero genera documento estadístico
  * D2 recibe las ventas, genera albarán o factura directa para la entrega
@@ -42,7 +42,7 @@ D1 - SyncModoVentas=VentaExternaLiquidacion
 D2 - SyncModoVentas=VentaExterna
 
 
-== Reparto (modelo Sedinte-Dispegra)
+## Reparto (modelo Sedinte-Dispegra)
 
  * D1 crea un pedido (o lo recibe desde el fabricante como Pepsi, Schweppes)
  * D2 recibe el pedido y genera **albaran de intermediacion de D1**
@@ -57,7 +57,7 @@ D2 - SyncModoVentas=Reparto
 
 
 
-== Intermediacion (modelo Blasco-Il-lusions)
+## Intermediacion (modelo Blasco-Il-lusions)
 
  * D1 hace la venta y reparto, genera **albaranes de intermediación de D2**
  * D2 recibe la venta (bloqueada, liquidación cerrada) y genera albaranes y operación de cobro
@@ -72,7 +72,7 @@ D2 - SyncModoVentas=Intermediacion
 
 
 
-=== Configuración de los proveedores
+# Configuración de los proveedores
 
 En **RepartoLiquidacion** y **Intermediacion** podemos generar la operacion de cobro para documentos
 con la forma de pago a contado:

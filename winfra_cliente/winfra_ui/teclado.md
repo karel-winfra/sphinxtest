@@ -1,9 +1,9 @@
-title: teclado.md
-=== Trabajar con el teclado
 
-== Navegación con el teclado
+# Trabajar con el teclado
 
-///winfra_ui/teclado.png
+## Navegación con el teclado
+
+![](teclado.png)
 
 Al abrir la ventana el foco va a un control predeterminado.
 
@@ -17,6 +17,6 @@ Para la lista de ventanas abiertas pulse **CTRL+F12**.
 
 Para cambiar a siguiente pantalla pulse **CTRL+Espacio**.
 
-== Atajos de teclado
+## Atajos de teclado
 
 Configura las teclas de las operaciones comunes en [c]Configuración de la aplicación|views/Ribera2.Shell.Views.ThemeConfigView.txt[c]

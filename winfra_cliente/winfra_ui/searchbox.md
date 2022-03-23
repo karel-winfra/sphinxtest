@@ -1,6 +1,6 @@
-title: searchbox.md
-=== Selección con búsqueda
 
-///winfra_ui/searchbox.png
+# Selección con búsqueda
 
-///winfra_ui/searchbox_popup.png
+![](searchbox.png)
+
+![](searchbox_popup.png)

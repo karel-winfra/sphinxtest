@@ -1,14 +1,14 @@
-title: Winfra3.Gestion.Views.Maestros.Personal.PersonalDetailsView.md
-=== Configuración de la gestión de horarios
 
-== Posibles acciones en función del tipo de personal para el que queramos calcular horarios
+# Configuración de la gestión de horarios
 
-= Personal de administración (oficina)
+## Posibles acciones en función del tipo de personal para el que queramos calcular horarios
+
+### Personal de administración (oficina)
     - Tipo de cálculo = Fijo
     - Se indican las horas de inicio y fin de cada turno.
     - Primer turno es por la mañana y segundo turno es por la tarde
 
-= Personal comercial
+### Personal comercial
     - Tipo de cálculo = Calcular sobre acción
     - Cálculo hora de inicio = Hora inicio tempómetro
     - Cálculo hora finalización = Hora finalización tempómetro
@@ -17,7 +17,7 @@ title: Winfra3.Gestion.Views.Maestros.Personal.PersonalDetailsView.md
         ○ Si indicamos Hora fin jornada desde, se tendrá en cuenta el último registro del tempómetro anterior a esta
         ○ Hora inicio jornada hasta y Hora fin jornada hasta, no se usan en este cálculo
 
-= Personal de reparto
+### Personal de reparto
     - Tipo de cálculo = Calcular sobre acción
     - Cálculo hora inicio. Posibles valores
         ○ Hora inicio jornada = Hora inicio jornada desde que indiquemos

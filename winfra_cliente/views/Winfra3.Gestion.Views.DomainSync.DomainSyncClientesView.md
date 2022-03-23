@@ -1,5 +1,5 @@
-title: Winfra3.Gestion.Views.DomainSync.DomainSyncClientesView.md
-=== Actualizar clientes entre dominios
+
+# Actualizar clientes entre dominios
 
 La pantalla permite enlazar, copiar y crear nuevos cliente entre dos dominios.
 
@@ -7,7 +7,7 @@ La operativa depende como esta configurada la conexión entre los dominios.
 El parámetro **Actualizar clientes** de la configuración.
 El dominio que permite actualizar clientes trae los clientes del dominio conectado y los enlaza o crea clientes en local.
 
-== Operaciones Actualizar clientes = Sí
+## Operaciones Actualizar clientes = Sí
 
 **Enlazar cliente** - enlaza el cliente externo con el cliente para enlazar.
 El cliente para enlazar esta preseleccionado basándose en identificación fiscal, numero de referencia de proveedor o parecido del nombre.
@@ -24,7 +24,7 @@ Esta operación no es necesaria pero permite mantener los clientes actualizados.
 Las condiciones se crean automáticamente al crear o enlazar el cliente.
 Esta operación es útil si añadimos segunda configuración y los clientes ya estan creados/enlazados.
 
-== Operaciones Actualizar clientes = No
+## Operaciones Actualizar clientes = No
 
 El dominio sirve como origen de los clientes - nunca los actualizamos aquí.
 

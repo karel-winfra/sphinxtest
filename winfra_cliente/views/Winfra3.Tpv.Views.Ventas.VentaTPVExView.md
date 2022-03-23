@@ -1,11 +1,11 @@
-title: Winfra3.Tpv.Views.Ventas.VentaTPVExView.md
-=== Pantalla de venta del terminal TPV Extendida
+
+# Pantalla de venta del terminal TPV Extendida
 
 Utiliza la tecla **Esc** para situarse en la casilla de entrada de texto.
 
 Utiliza la tecla configurada para agregar (por defecto **F2**) para modificar la linea de venta.
 
-== Distintas opciones de entrada de texto
+## Distintas opciones de entrada de texto
 
 * **'c' por delante** obtiene el cliente indicado. 'c' solo establece el cliente contado.
 

@@ -1,7 +1,7 @@
-title: Winfra3.Gestion.Views.Maestros.RappelTipos.RappelTiposMainView.md
-=== Tipos de rappel
 
-== Cálculo para promociones
+# Tipos de rappel
+
+## Cálculo para promociones
 
  * **Sin incluir** - en el cálculo del rappel no se incluirán las líneas de venta que tengan descuento.
  * **Dotacion** - el rappel se dota para el proveedor pero no se liquida con el cliente.

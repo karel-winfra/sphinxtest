@@ -4,7 +4,7 @@ Cuadrículas son el principal método de visualización y modificación de datos
 
 ## Cuadrícula de visualización
 
-///winfra_ui/grid_gridview.png
+![](grid_gridview.png)
 
  * Es solo de lectura y carga solo los registros que el usuario esta viendo.
  * Las flechas indican la ordenación actual de la cuadricula. Es posible ordenar por varias columnas a la vez.
@@ -16,7 +16,7 @@ La ordenación se aplica a todos los resultados, no solo los que están visibles
 
 ## Cuadrícula de modificación
 
-///winfra_ui/grid_datagrid.png
+![](grid_datagrid.png)
 
  * Permite modificación de los datos directamente en la línea seleccionada.
  * Las columnas modificable tienen la cabecera subrayada en color naranja.
@@ -33,7 +33,7 @@ Teclas de modificación:
 
 ## Cuadrícula con vínculos
 
-///winfra_ui/grid_datagrid_link.png
+![](grid_datagrid_link.png)
 
 El ejemplo de la búsqueda del cliente presenta registro con vínculos a información relacionada:
  * identificación fiscal

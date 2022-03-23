@@ -1,7 +1,7 @@
-title: Winfra3.Gestion.Views.ApoyoComercial.ApoyoComercialView.md
-=== Configuración del apoyo comercial
 
-== Cabecera del apoyo
+# Configuración del apoyo comercial
+
+## Cabecera del apoyo
 
 Campos para tener en cuenta de la cabecera:
 
@@ -13,11 +13,11 @@ Campos para tener en cuenta de la cabecera:
 
  * **Tipo cargos ventas** permite seleccionar si el apoyo es para todas las unidades entregadas de los productos establecidos en la tabla, solo para las ventas de promocion/regalo , ó solo para las unidades de cargo.
 
-== Configurar los clientes y productos afectados por la tabla
+## Configurar los clientes y productos afectados por la tabla
 
 Se establecen mediante dos pestañas, una de **Universos aplicables** donde se indican a que clientes incluimos en el apoyo y otra de **Condiciones** donde establecemos sobre que productos definimos el apoyo recibido.
 
-= Tipos de condiciones de apoyo
+### Tipos de condiciones de apoyo
 
 Podemos establecer distintas condiciones de apoyo, según nos indique el proveedor, estas condiciones son:
 

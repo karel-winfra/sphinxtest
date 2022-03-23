@@ -1,9 +1,9 @@
-title: Winfra3.Gestion.Views.Maestros.ArticuloCentrosPreparacion.ArticuloCentrosPreparacionMainView.md
-=== Centros de preparación
+
+# Centros de preparación
 
 Define los centros para identificar los procesos de preparación de carga de los artículos.
 
-== Procesos
+## Procesos
 
  * **Contar** - proceso por defecto. Indica que después de preparar la carga hay que contar
 la cantidad total de la hoja de carga
@@ -36,6 +36,6 @@ Prepara todos los azucarillos etc. en una caja, repartidor coge lo que necesita 
 
 Prepara una bolsa sin limite del tamaño con toda la mercancía para un cliente.
 
-== Impresoras
+## Impresoras
 
 Si utiliza el almacén mecanizado (tablets) indica las impresoras en las que imprimir las hojas y las etiquetas.

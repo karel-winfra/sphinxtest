@@ -1,5 +1,5 @@
-title: Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.md
-=== Configuración de las cuentas de correo
+
+# Configuración de las cuentas de correo
 
 La pantalla permite configurar las cuentas que se van a utilizar para enviar el correo electrónico desde winfra.
 La configuración de la cuenta la proporciona el proveedor del servicio de correo ej.: google, hotmail, outlook etc.
@@ -8,7 +8,7 @@ Puede configurar varias cuentas para diferenciar por ejemplo el envío de las fa
 
 Que cuenta se va utilizar para que propósito esta configurado en los datos generales.
 
-== Parámetros de la cuenta
+## Parámetros de la cuenta
 
  * **Descripción** - descripcion para identificar las cuentas
  * **Correo origen** - correo electrónico que aparece en el campo "Desde:"

@@ -1,5 +1,5 @@
-title: Winfra3.Gestion.Views.VentasImpresion.VentasPerfilesImpresionMainView.md
-=== Configuración de los perfiles de impresión de venta
+
+# Configuración de los perfiles de impresión de venta
 
 La pantalla permite definir perfiles de impresión para los documentos de venta.
 Cada perfil representa un conjunto de colas de impresión y diseños de los documentos que se utilizan en un contexto.
@@ -8,7 +8,7 @@ pre-visualización de los documentos en la pantalla etc.
 
 Dentro de cada perfil aplicamos una serie de filtros para distinguir como se va a imprimir cada documento.
 
-== Campos de filtros
+## Campos de filtros
  * **Tipo** - filtra por tipo de documento. El tipo indicado agrupa varios tipos del documento para simplificar
 la configuración ej. Albaranes, Pedidos, Facturas etc. y además distingue otras propiedades ej.
 Albarán de intermediación, Albarán no valorado etc. El tipo es obligatorio y solo se puede repetir si hay otro filtro definido.
@@ -18,7 +18,7 @@ El campo solo es aplicable al tipo de albarán de intermediación.
  * **Serie** - filtra los documentos por la serie.
  * **Tipo facturación** - filtra los documentos por tipo de facturación
 
-== Campos de definición de la impresión
+## Campos de definición de la impresión
  * **Cola de impresión** - nombre de la cola de winfra3 en la que se van a enviar los documentos.
  * **Diseño** - nombre de diseño que se va a utilizar para imprimir el documento
  * **Desglose de los albaranes** - indica como se van a desglosar los albaranes en la impresión de las facturas
