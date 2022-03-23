@@ -23,6 +23,8 @@ author = 'Karel'
 
 highlight_language = 'text'
 
+html_copy_source = False
+
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be

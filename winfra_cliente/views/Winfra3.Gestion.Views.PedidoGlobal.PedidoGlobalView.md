@@ -35,14 +35,18 @@ y no se incluyen en las entregas. Las devoluciones hay que abonarlas en otro doc
 Junto con cada entrega se genera un documento valorado de envases. Las devoluciones hay que
 abonarlas en el mismo documento.
 
- !! Si el cliente seleccionado tiene marcado **No se cargan los envase** la gestión de envases cambia
+```{warning}
+Si el cliente seleccionado tiene marcado **No se cargan los envase** la gestión de envases cambia
 automaticamente a **No cargar envase**.
+```
 
 ### Entregas valoradas
 
 Si la opción esta marcada los albaranes de entrega se imprimirán valorados.
 Al desmarcar la opción la impresión solo incluye el artículo y la cantidad.
- ! La opción solo es aplicable al tipo pedido, las entregas de contratos no se valoran.
+```{note}
+La opción solo es aplicable al tipo pedido, las entregas de contratos no se valoran.
+```
 
 ## Detalles
 
@@ -76,7 +80,9 @@ La cantidad entregada es lo que queda por entregar.
 
 La operación crea un nueva entrega vacía. Hay que indicar el destinatario y las cantidades manualmente.
 
- ! Para generar la **nota de entrega** utiliza la operación **Generar albarán** de la pantalla de la entrega
+```{note}
+Para generar la **nota de entrega** utiliza la operación **Generar albarán** de la pantalla de la entrega
+```
 o de la pantalla **Entregas globales**
 
 ## Facturas

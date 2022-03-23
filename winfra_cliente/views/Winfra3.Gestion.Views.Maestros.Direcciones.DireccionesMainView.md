@@ -54,7 +54,9 @@ Una lista vacía de tipos indica que no hay tipos conocidos para el componente d
 
 Además de lo dicho antes, los componentes de dirección pueden incluir los siguientes tipos.
 
- ! Nota: Esta lista no está completa y está sujeta a cambio.
+```{note}
+Esta lista no está completa y está sujeta a cambios.
+```
 
  * **floor** indica el piso en la dirección de un edificio.
  * **establishment** generalmente indica un lugar que aún ha sido categorizado.

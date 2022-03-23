@@ -11,7 +11,9 @@ La cola de winfra solo puede aparecer una vez.
  * **Habilitar impresión** - indica si la impresión esta habilitada. Sirve para poder parar la impresión del servicio por completo.
  * **Intervalo** - intervalo en segundos entre las comprobaciones de la cola.
 
- !! El servicio comprueba si hay nuevos documentos en la cola de winfra según el intervalo indicado.
+```{warning}
+El servicio comprueba si hay nuevos documentos en la cola de winfra según el intervalo indicado.
+```
 Por lo tanto, el intervalo es el máximo tiempo entre agregar un nuevo documento a la cola y el inicio de la impresión.
 Si el tiempo es demasiado corto (menor que 15 segundos) puede sobrecargar el equipo de servidor.
 
@@ -20,7 +22,9 @@ Si el tiempo es demasiado corto (menor que 15 segundos) puede sobrecargar el equ
 Permite configurar un usuario y contraseña para iniciar la sesión automáticamente después de lanzar la aplicación.
 Si el inicio no esta configurado hay que logearse para poder imprimir.
 
- !! Para el inicio automático hay que utilizar usuario solo con la rol **Impresora** para evitar acceso a otras partes de la aplicación.
+```{warning}
+Para el inicio automático hay que utilizar usuario solo con la rol **Impresora** para evitar acceso a otras partes de la aplicación.
+```
 
 ## Colas de impresión
 
@@ -39,10 +43,14 @@ Esto es aplicable a algunas antiguas impresoras matriciales.
 La opción de **Export a Excel** (opcionalmente sin formato) permite definir una carpeta a la que exportar automáticamente
 los documentos agregados a la cola. No hay que indicar la impresora, papel etc.
 
- ! Si el documento (o informe) incluye un nombre de fichero se va crear con el mismo nombre indicado y con las subcarpetas si se han indicado.
+```{note}
+Si el documento (o informe) incluye un nombre de fichero se va crear con el mismo nombre indicado y con las subcarpetas si se han indicado.
+```
 Si el documento ya existe lo sobrescribe.
 
- ! Si el documento no tiene el nombre de fichero se utilizara la descripción del documento y si el nombre ya existe se añade
+```{note}
+Si el documento no tiene el nombre de fichero se utilizara la descripción del documento y si el nombre ya existe se añade
+```
 un contador.
 
  * **Impresora** - nombre de la impresora - utiliza el dialogo de selección de impresora para elegir el nombre.
@@ -67,7 +75,9 @@ el documento y convierte las paginas correspondientes a las copias a escala de g
 
 **EscalaGrises_Ticket** - imprime las copias a escala de grises. Imprime en un documento único pero genera el ticket de impresión para cada página.
 
- !! La mejor opción para imprimir en escala de grises es **EscalaGrises_Ticket**. Si no funciona prueba con **EscalaGrises_SepararPaginas** pero suele
+```{warning}
+La mejor opción para imprimir en escala de grises es **EscalaGrises_Ticket**. Si no funciona prueba con **EscalaGrises_SepararPaginas** pero suele
+```
 ser mucho mas lenta. La **EscalaGrises** es rápida pero no garantiza que se va a utilizar solo tóner negro.
 
 

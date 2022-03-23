@@ -38,7 +38,9 @@ Indica una frecuencia de visita de los clientes.
  * **Semanas pares, Semanas impares** - visita cliente cada dos semanas
  * **Mensual 1., 2., 3., 4. semana** - visita cliente cada 4 semanas
 
- ! La frecuencia no esta basada en el numero de semana en el año actual.
+```{note}
+La frecuencia no esta basada en el numero de semana en el año actual.
+```
 Utilizar el numero de semana según el calendario ISO rompería la continuación al cambiar el año.
 Un año con 53 semanas (2015, 2020) tiene la ultima impar y la siguiente es numero 1, también impar.
 
@@ -52,7 +54,9 @@ Esto permite, por ejemplo, quitar puntos de venta de una población filtrando po
  * Abra la ruta de la que hay que quitar los puntos de venta
  * Busca la población ej. por código postal. Si ademas filtra la misma ruta solo verá los puntos de venta a quitar.
 
- ! rv:Ruta 2 Lunes d:46680
+```
+rv:Ruta 2 Lunes d:46680
+```
 
  * Los resultados incluidos están marcados
  * Selecciona los puntos de venta, puede seleccionar todos, los no incluidos en la ruta no se tienen en cuenta
@@ -76,7 +80,9 @@ Copia los clientes a nueva ruta pero los mantiene en la original
  * Abre la ruta de destino
  * En el búsqueda busca los clientes de ruta de origen. Utiliza el parámetro de ruta (rv, rr, rp)
 
- ! rv:Ruta 2 Lunes
+```
+rv:Ruta 2 Lunes
+```
 
  * Los resultados de la búsqueda son ordenados por orden de ruta
  * Selecciona los puntos de venta y pincha la flecha para incluir

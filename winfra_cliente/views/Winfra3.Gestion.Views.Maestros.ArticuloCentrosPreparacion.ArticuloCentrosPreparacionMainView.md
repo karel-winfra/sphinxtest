@@ -23,16 +23,22 @@ no tenga que abrir demasiadas cajas en la entrega.
 
 Ejemplos de la configuración (cajas por cliente, tamaño de la caja):
 
- ! No cajas por cliente, tamaño 6
+```
+No cajas por cliente, tamaño 6
+```
 
 Prepara botellas en cajas de 6 optimizando el reparto. El repartidor tendrá que abrir las cajas y sacar las botellas
 correspondientes.
 
- ! No cajas por cliente, tamaño 999
+```
+No cajas por cliente, tamaño 999
+```
 
 Prepara todos los azucarillos etc. en una caja, repartidor coge lo que necesita según el albarán.
 
- ! Sí cajas por cliente, tamaño 999
+```
+Sí cajas por cliente, tamaño 999
+```
 
 Prepara una bolsa sin limite del tamaño con toda la mercancía para un cliente.
 

@@ -29,7 +29,9 @@ El tiempo no incluye creación de la respuesta en wsgi app (flask) y procesamien
  * **Error** - muestra si ha ocurrido un error en la conexión. Solo aparecen los errores que Winfra detecta y automáticamente
 re-intenta la comunicación (estados http ConnectFailure, ConnectionClosed, KeepAliveFailure)
 
- ! No esta incluido en los tiempos la codificación/decodificación de los datos (json encode/decode) en el cliente y la actualización de la pantalla.
+```{note}
+No esta incluido en los tiempos la codificación/decodificación de los datos (json encode/decode) en el cliente y la actualización de la pantalla.
+```
 En caso de listados y cuadriculas con muchos registros puede ser significante, pero depende solamente del rendimiento del ordenador del cliente.
 
 ## Actividad de servidor

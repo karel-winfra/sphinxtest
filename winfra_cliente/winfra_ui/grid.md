@@ -29,7 +29,9 @@ Teclas de modificación:
  * Para cancelar la modificación utiliza tecla **ESC**
  * Para confirmar el valor utiliza **Enter** o **Tab** o **tecla +** del teclado numérico.
 
- !! Confirmar el registro con **Enter** pasa a siguiente registro. Confirmar con el **Tab** o **+** pasa a siguiente columna.
+```{warning}
+Confirmar el registro con **Enter** pasa a siguiente registro. Confirmar con el **Tab** o **+** pasa a siguiente columna.
+```
 
 ## Cuadrícula con vínculos
 

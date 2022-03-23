@@ -9,4 +9,6 @@ Permite indicar los impuestos para un artículo.
 
  El total de porcentaje para la venta y para la compra tiene que ser siempre 100.
 
- ! Utiliza la casilla de precio total y cuota para calcular el porcentaje. El precio y cuota no se guardan y sirven solo para el calculo.
+```{note}
+Utiliza la casilla de precio total y cuota para calcular el porcentaje. El precio y cuota no se guardan y sirven solo para el calculo.
+```

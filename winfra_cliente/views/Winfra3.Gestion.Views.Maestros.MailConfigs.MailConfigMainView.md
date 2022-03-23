@@ -20,4 +20,6 @@ Que cuenta se va utilizar para que propósito esta configurado en los datos gene
  * **Tiempo de espera** - Indica el tiempo de espera o deja el valor **0** para utilizar un valor por defecto.
  * **Emails por minuto** - Indica numero máximo de correos que se pueden enviar por minuto o 0 para indicar que no existe un limite.
 
- ! Utiliza el botón de **Enviar prueba** para validar al configuración de la cuenta.
+```{note}
+Utiliza el botón de **Enviar prueba** para validar al configuración de la cuenta.
+```

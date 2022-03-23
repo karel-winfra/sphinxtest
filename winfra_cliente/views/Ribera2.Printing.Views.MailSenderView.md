@@ -36,11 +36,15 @@ trabajo y luego volver a iniciar el envío.
 Si el error esta en el propio documento, por ejemplo la dirección de correo de cliente no es válida, tendrá modificar
 el correo y volver a imprimir.
 
- ! La pantalla de impresión masiva de albaranes y facturas permite filtrar los documentos enviados.
+```{note}
+La pantalla de impresión masiva de albaranes y facturas permite filtrar los documentos enviados.
+```
 
 ## Colas para el envío
 
 Es posible utilizar cualquier colo de impresión para el envío de correo, pero es posible lanzar solo un envío por cada cola.
 Si necesita que varios usuarios envíen correos a la vez hay que crear una cola para cada uno.
 
- !! En el caso de impresión de documentos de venta el perfil utilizado tiene que tener el **Tamaño de lote** igual a **1**.
+```{warning}
+En el caso de impresión de documentos de venta el perfil utilizado tiene que tener el **Tamaño de lote** igual a **1**.
+```

@@ -9,13 +9,17 @@ Los contadores están definidos por cliente.
 
 ## Configuración del contador
  * **Activo** - Indica si el contador esta activo (acumula los cargos y regalos).
- !! La búsqueda por defecto solo muestra los contadores activos. Utiliza parámetro **b:** para ver todos los contadores
+```{warning}
+La búsqueda por defecto solo muestra los contadores activos. Utiliza parámetro **b:** para ver todos los contadores
+```
 
  * **Desde** - activo desde la fecha
  * **Hasta** - activo hasta la fecha (inclusivo). Las ventas fuera de las fechas no acumulan en el contador
  * **Artículo formato** - se acumulan las ventas del artículo formato indicado
  * **Artículo consumo** - se acumulan las ventas de todos los artículos formato relacionados con el artículo consumo.
- !! La cantidad acumulada del artículo consumo es la cantidad de entrega multiplicada por la equivalencia de artículo formato vendido. Hay que indicar el cargo y regalo teniendo en cuenta la equivalencia.
+```{warning}
+La cantidad acumulada del artículo consumo es la cantidad de entrega multiplicada por la equivalencia de artículo formato vendido. Hay que indicar el cargo y regalo teniendo en cuenta la equivalencia.
+```
  * **Artículo agrupación - se acumulan las ventas de artículos de formato incluidos en la agrupación
  * **Cargo** - Indica el cargo mínimo para aplicar el regalo. Si el cargo es **0** la cantidad de regalo es disponible solo una vez.
 Si el cargo es mayor que **0**, la cantidad de regalo es disponible cada vez que se acumula la venta igual a cargo.
@@ -29,11 +33,17 @@ La campaña es opcional.
 ## Aviso en la linea de venta
 
 En caso de cargo igual a **0** el aviso indica la cantidad de regalo que queda por entregar.
- ! regalo disponible = regalo - regalo acumulado
+```
+regalo disponible = regalo - regalo acumulado
+```
 
 En caso de cargo mayor que **0** el aviso indica la cantidad de cargo para el siguiente regalo y la cantidad de regalo ya disponible.
- ! regalo aplicable = redondear_abajo(cargo acumulado / cargo) * regalo
- ! regalo disponible = regalo aplicable - regalo acumulado
+```
+regalo aplicable = redondear_abajo(cargo acumulado / cargo) * regalo
+```
+```
+regalo disponible = regalo aplicable - regalo acumulado
+```
 
 ## Contador aplicable
 
