@@ -71,8 +71,11 @@ con la tarifa normal.</p>
 <li><p><strong>Semanas pares, Semanas impares</strong> - visita cliente cada dos semanas</p></li>
 <li><p><strong>Mensual 1., 2., 3., 4. semana</strong> - visita cliente cada 4 semanas</p></li>
 </ul>
-<p>! La frecuencia no esta basada en el numero de semana en el año actual.
-Utilizar el numero de semana según el calendario ISO rompería la continuación al cambiar el año.
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>La frecuencia no esta basada en el numero de semana en el año actual.</p>
+</div>
+<p>Utilizar el numero de semana según el calendario ISO rompería la continuación al cambiar el año.
 Un año con 53 semanas (2015, 2020) tiene la ultima impar y la siguiente es numero 1, también impar.</p>
 </section>
 <section id="anadir-y-quitar-los-puntos-de-venta">
@@ -84,7 +87,9 @@ Esto permite, por ejemplo, quitar puntos de venta de una población filtrando po
 <li><p>Abra la ruta de la que hay que quitar los puntos de venta</p></li>
 <li><p>Busca la población ej. por código postal. Si ademas filtra la misma ruta solo verá los puntos de venta a quitar.</p></li>
 </ul>
-<p>! rv:Ruta 2 Lunes d:46680</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rv:Ruta 2 Lunes d:46680
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>Los resultados incluidos están marcados</p></li>
 <li><p>Selecciona los puntos de venta, puede seleccionar todos, los no incluidos en la ruta no se tienen en cuenta</p></li>
@@ -109,7 +114,9 @@ Esto es especialmente útil para rutas de reparto que no permiten que cliente es
 <li><p>Abre la ruta de destino</p></li>
 <li><p>En el búsqueda busca los clientes de ruta de origen. Utiliza el parámetro de ruta (rv, rr, rp)</p></li>
 </ul>
-<p>! rv:Ruta 2 Lunes</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rv:Ruta 2 Lunes
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>Los resultados de la búsqueda son ordenados por orden de ruta</p></li>
 <li><p>Selecciona los puntos de venta y pincha la flecha para incluir</p></li>
@@ -223,9 +230,6 @@ Esto es especialmente útil para rutas de reparto que no permiten que cliente es
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
-      |
-      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.Maestros.Rutas.RutaDetailsView.md.txt"
-          rel="nofollow">Page source</a>
     </div>
 
     

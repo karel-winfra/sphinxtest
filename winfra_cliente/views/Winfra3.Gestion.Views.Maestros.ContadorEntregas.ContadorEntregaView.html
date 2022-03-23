@@ -43,13 +43,23 @@ Contador permite definir el regalo máximo o en relación con cargo para avisar 
 <section id="configuracion-del-contador">
 <h2>Configuración del contador<a class="headerlink" href="#configuracion-del-contador" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
-<li><p><strong>Activo</strong> - Indica si el contador esta activo (acumula los cargos y regalos).
-!! La búsqueda por defecto solo muestra los contadores activos. Utiliza parámetro <strong>b:</strong> para ver todos los contadores</p></li>
+<li><p><strong>Activo</strong> - Indica si el contador esta activo (acumula los cargos y regalos).</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>La búsqueda por defecto solo muestra los contadores activos. Utiliza parámetro <strong>b:</strong> para ver todos los contadores</p>
+</div>
+<ul class="simple">
 <li><p><strong>Desde</strong> - activo desde la fecha</p></li>
 <li><p><strong>Hasta</strong> - activo hasta la fecha (inclusivo). Las ventas fuera de las fechas no acumulan en el contador</p></li>
 <li><p><strong>Artículo formato</strong> - se acumulan las ventas del artículo formato indicado</p></li>
-<li><p><strong>Artículo consumo</strong> - se acumulan las ventas de todos los artículos formato relacionados con el artículo consumo.
-!! La cantidad acumulada del artículo consumo es la cantidad de entrega multiplicada por la equivalencia de artículo formato vendido. Hay que indicar el cargo y regalo teniendo en cuenta la equivalencia.</p></li>
+<li><p><strong>Artículo consumo</strong> - se acumulan las ventas de todos los artículos formato relacionados con el artículo consumo.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>La cantidad acumulada del artículo consumo es la cantidad de entrega multiplicada por la equivalencia de artículo formato vendido. Hay que indicar el cargo y regalo teniendo en cuenta la equivalencia.</p>
+</div>
+<ul class="simple">
 <li><p>**Artículo agrupación - se acumulan las ventas de artículos de formato incluidos en la agrupación</p></li>
 <li><p><strong>Cargo</strong> - Indica el cargo mínimo para aplicar el regalo. Si el cargo es <strong>0</strong> la cantidad de regalo es disponible solo una vez.
 Si el cargo es mayor que <strong>0</strong>, la cantidad de regalo es disponible cada vez que se acumula la venta igual a cargo.</p></li>
@@ -63,11 +73,17 @@ La campaña es opcional.</p></li>
 </section>
 <section id="aviso-en-la-linea-de-venta">
 <h2>Aviso en la linea de venta<a class="headerlink" href="#aviso-en-la-linea-de-venta" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>En caso de cargo igual a <strong>0</strong> el aviso indica la cantidad de regalo que queda por entregar.
-! regalo disponible = regalo - regalo acumulado</p>
-<p>En caso de cargo mayor que <strong>0</strong> el aviso indica la cantidad de cargo para el siguiente regalo y la cantidad de regalo ya disponible.
-! regalo aplicable = redondear_abajo(cargo acumulado / cargo) * regalo
-! regalo disponible = regalo aplicable - regalo acumulado</p>
+<p>En caso de cargo igual a <strong>0</strong> el aviso indica la cantidad de regalo que queda por entregar.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>regalo disponible = regalo - regalo acumulado
+</pre></div>
+</div>
+<p>En caso de cargo mayor que <strong>0</strong> el aviso indica la cantidad de cargo para el siguiente regalo y la cantidad de regalo ya disponible.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>regalo aplicable = redondear_abajo(cargo acumulado / cargo) * regalo
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>regalo disponible = regalo aplicable - regalo acumulado
+</pre></div>
+</div>
 </section>
 <section id="contador-aplicable">
 <h2>Contador aplicable<a class="headerlink" href="#contador-aplicable" title="Enlazar permanentemente con este título">¶</a></h2>
@@ -173,9 +189,6 @@ La campaña es opcional.</p></li>
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
-      |
-      <a href="../../_sources/winfra_cliente/views/Winfra3.Gestion.Views.Maestros.ContadorEntregas.ContadorEntregaView.md.txt"
-          rel="nofollow">Page source</a>
     </div>
 
     

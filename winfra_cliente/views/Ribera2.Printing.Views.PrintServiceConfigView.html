@@ -45,15 +45,21 @@ La cola de winfra solo puede aparecer una vez.</p>
 <li><p><strong>Habilitar impresión</strong> - indica si la impresión esta habilitada. Sirve para poder parar la impresión del servicio por completo.</p></li>
 <li><p><strong>Intervalo</strong> - intervalo en segundos entre las comprobaciones de la cola.</p></li>
 </ul>
-<p>!! El servicio comprueba si hay nuevos documentos en la cola de winfra según el intervalo indicado.
-Por lo tanto, el intervalo es el máximo tiempo entre agregar un nuevo documento a la cola y el inicio de la impresión.
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>El servicio comprueba si hay nuevos documentos en la cola de winfra según el intervalo indicado.</p>
+</div>
+<p>Por lo tanto, el intervalo es el máximo tiempo entre agregar un nuevo documento a la cola y el inicio de la impresión.
 Si el tiempo es demasiado corto (menor que 15 segundos) puede sobrecargar el equipo de servidor.</p>
 </section>
 <section id="inicio-de-sesion-automatico">
 <h2>Inicio de sesión automático<a class="headerlink" href="#inicio-de-sesion-automatico" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Permite configurar un usuario y contraseña para iniciar la sesión automáticamente después de lanzar la aplicación.
 Si el inicio no esta configurado hay que logearse para poder imprimir.</p>
-<p>!! Para el inicio automático hay que utilizar usuario solo con la rol <strong>Impresora</strong> para evitar acceso a otras partes de la aplicación.</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Para el inicio automático hay que utilizar usuario solo con la rol <strong>Impresora</strong> para evitar acceso a otras partes de la aplicación.</p>
+</div>
 </section>
 <section id="colas-de-impresion">
 <h2>Colas de impresión<a class="headerlink" href="#colas-de-impresion" title="Enlazar permanentemente con este título">¶</a></h2>
@@ -69,10 +75,16 @@ y compartidas a través de la red.</p>
 Esto es aplicable a algunas antiguas impresoras matriciales.</p>
 <p>La opción de <strong>Export a Excel</strong> (opcionalmente sin formato) permite definir una carpeta a la que exportar automáticamente
 los documentos agregados a la cola. No hay que indicar la impresora, papel etc.</p>
-<p>! Si el documento (o informe) incluye un nombre de fichero se va crear con el mismo nombre indicado y con las subcarpetas si se han indicado.
-Si el documento ya existe lo sobrescribe.</p>
-<p>! Si el documento no tiene el nombre de fichero se utilizara la descripción del documento y si el nombre ya existe se añade
-un contador.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si el documento (o informe) incluye un nombre de fichero se va crear con el mismo nombre indicado y con las subcarpetas si se han indicado.</p>
+</div>
+<p>Si el documento ya existe lo sobrescribe.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si el documento no tiene el nombre de fichero se utilizara la descripción del documento y si el nombre ya existe se añade</p>
+</div>
+<p>un contador.</p>
 <ul class="simple">
 <li><p><strong>Impresora</strong> - nombre de la impresora - utiliza el dialogo de selección de impresora para elegir el nombre.
 Si el tipo de proceso es <strong>Puerto de serie</strong> escriba el nombre y numero de puerto ej.: <strong>LTP1</strong> o <strong>COM1</strong>.</p></li>
@@ -89,8 +101,11 @@ El documento original se imprime en color. Esto es aplicable a los documentos de
 el documento y convierte las paginas correspondientes a las copias a escala de grises.</p>
 <p><strong>EscalaGrises_SepararPaginas</strong> - imprimir las copias a escala de grises. Separa las paginas en documentos individuales.</p>
 <p><strong>EscalaGrises_Ticket</strong> - imprime las copias a escala de grises. Imprime en un documento único pero genera el ticket de impresión para cada página.</p>
-<p>!! La mejor opción para imprimir en escala de grises es <strong>EscalaGrises_Ticket</strong>. Si no funciona prueba con <strong>EscalaGrises_SepararPaginas</strong> pero suele
-ser mucho mas lenta. La <strong>EscalaGrises</strong> es rápida pero no garantiza que se va a utilizar solo tóner negro.</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>La mejor opción para imprimir en escala de grises es <strong>EscalaGrises_Ticket</strong>. Si no funciona prueba con <strong>EscalaGrises_SepararPaginas</strong> pero suele</p>
+</div>
+<p>ser mucho mas lenta. La <strong>EscalaGrises</strong> es rápida pero no garantiza que se va a utilizar solo tóner negro.</p>
 <ul class="simple">
 <li><p><strong>Ruta raíz para los procesos de exportación</strong> indica la ruta raíz para la exportación, ej.: C:\export<br />
 La opción solo es válida para los tipos de proceso <strong>Export a Excel</strong></p></li>
@@ -198,9 +213,6 @@ El código depende del modelo de la impresora</p></li>
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
-      |
-      <a href="../../_sources/winfra_cliente/views/Ribera2.Printing.Views.PrintServiceConfigView.md.txt"
-          rel="nofollow">Page source</a>
     </div>
 
     
