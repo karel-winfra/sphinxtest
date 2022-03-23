@@ -16,5 +16,5 @@
 ```{note}
 Los favoritos pueden aparecer al final del menú principal o incluidos dentro de un submenú.
 ```
- La opción esta configurable en la [c]pantalla de configuración|views/Ribera2.Shell.Views.ThemeConfigView.txt[c].
+ La opción esta configurable en la pantalla [](../views/Ribera2.Shell.Views.ThemeConfigView).
  La misma pantalla permite también eliminar todos los favoritos a la vez.

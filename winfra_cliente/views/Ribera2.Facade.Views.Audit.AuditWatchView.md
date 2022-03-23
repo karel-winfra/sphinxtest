@@ -1,4 +1,3 @@
-Category: Winfra3 Windows
 
 # Monitor de auditoría
 
@@ -6,7 +5,7 @@ Permite configurar los filtros y envía avisos por email cuando ocurran eventos 
 
 ## Configuración de los envíos
 
- * Configurar cuenta de correo en la pantalla de las [c]cuentas|views/Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView.txt[c]
+ * Configurar cuenta de correo en la pantalla de las [cuentas](Winfra3.Gestion.Views.Maestros.MailConfigs.MailConfigMainView)
  * Indica la cuenta de correo que quiere utilizar en datos generales **Configuración de correo para envío de los avisos del monitor auditoria**
  * Configura el proceso de **Monitor de auditoría** en el programador de las tareas.
 
