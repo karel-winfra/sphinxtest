@@ -60,7 +60,7 @@ encuentra tanto 'Barril AMSTEL 50L' como 'Barril 50L Heineken'
 ## Búsqueda con parámetros
 
 Los parámetros son normalmente una o dos letras separadas por **:** (dos puntos).
-Un separador alternativo es configurable en la [c]configuración de la aplicación|views/Ribera2.Shell.Views.ThemeConfigView.txt[c].
+Un separador alternativo es configurable en la [configuración de la aplicación](../views/Ribera2.Shell.Views.ThemeConfigView).
 
 Después de **:** va normalmente el texto o código buscado o el parámetro se puede quedar vacío.
 Al texto buscado se aplican las mismas reglas de uso de \* y de **"** mencionados en apartado anterior.

@@ -6,7 +6,6 @@ Asignación de pedidos, liquidaciones, tesorería, transmisiones de ventas, resu
 
 ```{toctree}
 :maxdepth: 2
-:caption: "Contenido:"
 
 transmision_ventas_proveedores
 resumen_intermediacion

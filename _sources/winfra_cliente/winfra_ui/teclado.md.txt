@@ -19,4 +19,4 @@ Para cambiar a siguiente pantalla pulse **CTRL+Espacio**.
 
 ## Atajos de teclado
 
-Configura las teclas de las operaciones comunes en [c]Configuración de la aplicación|views/Ribera2.Shell.Views.ThemeConfigView.txt[c]
+Configura las teclas de las operaciones comunes en [](../views/Ribera2.Shell.Views.ThemeConfigView)
