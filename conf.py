@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'winfradoc'
-copyright = '2022, Karel'
+project = 'Winfra'
+copyright = '2022, winfra.es'
 author = 'Karel'
 
 highlight_language = 'text'
@@ -27,6 +27,8 @@ html_copy_source = True
 html_show_sourcelink = False
 html_show_sphinx = False
 html_show_copyright = False
+
+html_logo = "_static/winfra.png"
 
 # -- General configuration ---------------------------------------------------
 
