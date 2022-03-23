@@ -2,7 +2,6 @@
 
 ```{toctree}
 :maxdepth: 2
-:caption: "Contenido:"
 
 Winfra3.Gestion.Views.VentasIncidencias.VentasClavesIncidenciasView
 Winfra3.Gestion.Views.PedidoGlobal.PedidoGlobalView

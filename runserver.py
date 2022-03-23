@@ -3,7 +3,8 @@ from livereload import Server, shell
 
 carpetas = [
     "puesta_en_marcha",
-    "winfra_cliente"
+    "winfra_cliente",
+    "howto",
 ]
 
 

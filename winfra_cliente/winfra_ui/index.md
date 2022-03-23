@@ -5,7 +5,6 @@ Organización de las pantallas, teclas de acceso y en general a la filosofía de
 
 ```{toctree}
 :maxdepth: 2
-:caption: "Contenido:"
 
 errores
 userinfo
