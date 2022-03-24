@@ -33,7 +33,7 @@ Cuando ya hemos guardado los lotes volveremos a la pantalla de compras donde se 
 
 ![](pedidos_compra_7.png)
 
-Una vez terminado este proceso y cuando el proveedor nos envíe la factura procederemos a comprobarla, si encontramos alguna diferencia entre la factura y el albarán deberemos, entrar en el ACO y selecionando la línea del producto que está erroneo, clicamos sobre el botón a la parte de la izquierda sobre "Albarán Administrativo", este albarán nos permite llevar un control de las diferencias que podamos tener en la factura, si nos han facturado cajas de más. Este proceso nos creará dos documentos: uno en positivo y otro en negativo para poder adjuntarlo según convenga a la factura correspondiente.
+Una vez terminado este proceso y cuando el proveedor nos envíe la factura procederemos a comprobarla, si encontramos alguna diferencia entre la factura y el albarán deberemos, entrar en el ACO y seleccionando la línea del producto que está erróneo, clicamos sobre el botón a la parte de la izquierda sobre "Albarán Administrativo", este albarán nos permite llevar un control de las diferencias que podamos tener en la factura, si nos han facturado cajas de más. Este proceso nos creará dos documentos: uno en positivo y otro en negativo para poder adjuntarle según convenga a la factura correspondiente.
 
 ![](pedidos_compra_11.png)
 

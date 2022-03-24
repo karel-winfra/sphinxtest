@@ -93,4 +93,4 @@ Tiene varia alternativas para ordenar la ruta
 
  * Utilice botones **Mover arriba** y **Mover abajo**
  * Indica el orden en la columna **Orden**
- * Pincha botón **Reordenar** para aplicar el orden y recalcular la numeración
+ * Pincha botón **Re-ordenar** para aplicar el orden y re-calcular la numeración

@@ -8,7 +8,7 @@ Permite configurar el usuario para la aplicación de ventas en los dispositivos 
  * **Nombre** - nombre o descripción tal como aparece en el dispositivo móvil
  * **Tipo** - el tipo de operativa del dispositivo
  * **Clave** - indica la clave personal de usuario. Hay que indicar la clave en los ajustes del venta móvil
-(en el telefono/tablet) para poder cargar este usuario.
+(en el teléfono/tablet) para poder cargar este usuario.
  * **BloquearConfiguracion** - Bloquea el acceso al Configuración y Herramientas en las pdas.
  * **Cargar todas las rutas** - Solo aplicable a tipo **Venta**.
  La carga incluye todas las rutas de venta definidas en la empresa. La opción sirve para inspectores o vendedores de apoyo.

@@ -22,7 +22,7 @@ Esta operación no es necesaria pero permite mantener los clientes actualizados.
 
 **Crear condiciones** - crea una nueva condición para el proveedor indicado en la configuración.
 Las condiciones se crean automáticamente al crear o enlazar el cliente.
-Esta operación es útil si añadimos segunda configuración y los clientes ya estan creados/enlazados.
+Esta operación es útil si añadimos segunda configuración y los clientes ya están creados/enlazados.
 
 ## Operaciones Actualizar clientes = No
 
@@ -36,7 +36,7 @@ La operación se utiliza en la venta externa o intermediación. El dominio que e
 Pero cliente necesitan la condición de venta para el proveedor que esta configurado en la conexión para crear la venta de intermediación.
 
 Esta operación genera las condiciones para todos los clientes que
- * estan de alta
+ * están de alta
  * tengan punto de venta
  * punto de venta esta de alta
  * no tienen la condición del proveedor ya creada y activa (según las fecha de inicio y fin)
