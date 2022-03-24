@@ -49,11 +49,11 @@ A continuación vamos a rectificar  los albaranes  con los cambios que hemos rea
 
 En la parte superior derecha tenemos un desplegable que nos permite seleccionar la forma en que queremos ver los documentos: 
 
- * ** Sin agrupar:** salen los documentos sin indicarnos a que hoja de carga pertenecen.
+ * **Sin agrupar:** salen los documentos sin indicarnos a que hoja de carga pertenecen.
 
 ![](liquidacion_hojas_de_carga_12.png)
 
- * ** Agrupar por hoja de carga:** nos salen los documentos agrupados por hojas de carga y en la barra nos indica el numero de la hoja de carga.
+ * **Agrupar por hoja de carga:** nos salen los documentos agrupados por hojas de carga y en la barra nos indica el numero de la hoja de carga.
 
 ![](liquidacion_hojas_de_carga_13.png)
 
@@ -61,7 +61,7 @@ En la parte superior derecha tenemos un desplegable que nos permite seleccionar 
 
 ![](liquidacion_hojas_de_carga_14.png)
 
- * ** Agrupar por proveedor:** realmente este campo nos sirve para los albaranes de intermediación, porque nos separara los albaranes de venta propia, que aparecerán los primeros, de los que son de intermediación, que vendrán a continuación, en este caso tampoco nos aparecera el numero de la hoja de carga.
+ * **Agrupar por proveedor:** realmente este campo nos sirve para los albaranes de intermediación, porque nos separara los albaranes de venta propia, que aparecerán los primeros, de los que son de intermediación, que vendrán a continuación, en este caso tampoco nos aparecerá el numero de la hoja de carga.
 
 ![](liquidacion_hojas_de_carga_15.png)
 
@@ -131,11 +131,11 @@ Al darle a Aceptar se nos cierra la liquidación y nos deberemos de dirigir a la
 En esta nueva pantalla de tesorería podremos especificar como se ha realizado el cobro, en efectivo, talón, ingreso a banco (si el repartidor al ser una cantidad importante la haya ingresado en la cuenta de la empresa para no llevar tanto efectivo encima), para ello dependiendo de cómo se haya efectuado el cobro nos dirigiremos a la pestaña correspondiente, puede ocurrir que tengamos que usar más de una de las formas de cobro, porque un cobro puede efectuarse de varias formas a la vez, en la liquidación solo pondremos el total de lo cobrado en el albarán pero aquí ya especificaremos de qué forma ha sido cobrado:
 
 
-* ** Efectivo: ** Por defecto siempre nos pasará todo como efectivo así que si no fuera así tendríamos que poner a cero esta columna o la parte de efectivo que nos hubieran dado, en caso de que nos haya pagado solo parte en efectivo el cliente.
+* **Efectivo:** Por defecto siempre nos pasará todo como efectivo así que si no fuera así tendríamos que poner a cero esta columna o la parte de efectivo que nos hubieran dado, en caso de que nos haya pagado solo parte en efectivo el cliente.
 
 ![](liquidacion_hojas_de_carga_32.png)
 
-* **Talón: ** Nos posicionaremos en la columna de tipo de efecto y si no sabemos los que hay registrados, pondremos un asterisco y clicaremos intro y esto nos sacara un cuadro con los diferentes tipos de efectos.
+* **Talón:** Nos posicionaremos en la columna de tipo de efecto y si no sabemos los que hay registrados, pondremos un asterisco y clicaremos intro y esto nos sacara un cuadro con los diferentes tipos de efectos.
 
 ![](liquidacion_hojas_de_carga_33.png)
 
@@ -143,7 +143,7 @@ después de especificar el tipo de efecto simplemente rellenaremos los datos del
 
 ![](liquidacion_hojas_de_carga_34.png)
 
-* ** Ingreso Banco: ** En este caso pondríamos igualmente el importe cobrado en la pestaña de Cobros y luego en la pestaña de ingresos en Banco indicaremos la cuenta de tesorería (el banco donde se ha hecho el ingreso) en descripción contable algo que nos indique de donde viene ese ingreso y la fecha (por ejemplo, ingreso Jaime Planas, que es el repartidor en este caso) y en tercer lugar el importe ingresado.
+* **Ingreso Banco:** En este caso pondríamos igualmente el importe cobrado en la pestaña de Cobros y luego en la pestaña de ingresos en Banco indicaremos la cuenta de tesorería (el banco donde se ha hecho el ingreso) en descripción contable algo que nos indique de donde viene ese ingreso y la fecha (por ejemplo, ingreso Jaime Planas, que es el repartidor en este caso) y en tercer lugar el importe ingresado.
 
 ![](liquidacion_hojas_de_carga_35.png)
 
@@ -155,7 +155,7 @@ Si seleccionaríamos la opción de Dietas o Combustible, directamente nos lo aso
 
 ![](liquidacion_hojas_de_carga_37.png)
 
-Una vez terminados estos pasos gardaremos toda la información, después, si hay efectivo  procederemos a realizar el desglose del mismo, dirigiéndonos  al botón lateral Mostrar desglose de Efectivo.
+Una vez terminados estos pasos guardaremos toda la información, después, si hay efectivo  procederemos a realizar el desglose del mismo, dirigiéndonos  al botón lateral Mostrar desglose de Efectivo.
 
 ![](liquidacion_hojas_de_carga_38.png)
 

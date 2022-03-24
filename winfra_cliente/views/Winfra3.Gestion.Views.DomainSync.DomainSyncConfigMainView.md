@@ -74,10 +74,10 @@ D2 - SyncModoVentas=Intermediacion
 
 # Configuración de los proveedores
 
-En **RepartoLiquidacion** y **Intermediacion** podemos generar la operacion de cobro para documentos
+En **RepartoLiquidacion** y **Intermediacion** podemos generar la operación de cobro para documentos
 con la forma de pago a contado:
 
- * indicar en los dos proveedores, local y externo las formas de pago de contado y credito
+ * indicar en los dos proveedores, local y externo las formas de pago de contado y crédito
  * en la sincronización de venta los documentos con forma de pago a contado del proveedor externo
 indicamos forma de pago a contado del proveedor local
  * documentos a contado se añaden a una operación de tesorería como cobro

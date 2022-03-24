@@ -10,7 +10,7 @@ facturadas y posibles discrepancias.
 
 ## Configuración del pedido global
 
-La configuración se aplica al generar las entregas y las facturas. Si los documentos ya estan generados
+La configuración se aplica al generar las entregas y las facturas. Si los documentos ya están generados
 hay que modificarlos manualmente.
 
 Los valores por defecto de la configuración se pueden configurar en *Datos de tipo documento*,
@@ -21,7 +21,7 @@ apartado de *Pedido global*.
 Existen dos tipos de pedido global:
  * **Pedido** - las entregas hay que generarlas manualmente desde la pantalla de
 pedido global
- * **Contrato** - las entregas se generan automaticamente desde las descargas de
+ * **Contrato** - las entregas se generan automáticamente desde las descargas de
 venta móvil hasta agotar la cantidad pedida. Es posible generar la entrega manualmente
 igual como en caso de pedido.
 
@@ -37,7 +37,7 @@ abonarlas en el mismo documento.
 
 ```{warning}
 Si el cliente seleccionado tiene marcado **No se cargan los envase** la gestión de envases cambia
-automaticamente a **No cargar envase**.
+automáticamente a **No cargar envase**.
 ```
 
 ### Entregas valoradas
@@ -66,7 +66,7 @@ El uso de la campaña de tipo regalo o promoción tiene varias limitaciones:
 Las entregas se generan en dos pasos:
  * Entrega del pedido global - indica la dirección de entrega, artículos y cantidades entregadas
  * Nota de entrega - un albarán de tipo **Nota de entrega** asociado a la entrega de pedido global
-que se genera automaticamente apartir de su cabecera y líneas.
+que se genera automáticamente a partir de su cabecera y líneas.
 
 En el caso de generar las entregas de un pedido de tipo **Contrato** en el proceso automático de la descarga de las
 ventas móvil generamos los dos documentos a la vez.

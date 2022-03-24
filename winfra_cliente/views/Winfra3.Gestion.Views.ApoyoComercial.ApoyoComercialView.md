@@ -8,10 +8,10 @@ Campos para tener en cuenta de la cabecera:
  * **Tipo apoyo** permite indicar si el apoyo es sobre las ventas o sobre las compras.
 
  * **Tipo movimientos ventas** permite seleccionar si el apoyo se establece para todos los tipos de ventas,
- solo para las ventas directas ó para las ventas de intermediacion/servicios de terceros.
+ solo para las ventas directas ó para las ventas de intermediación/servicios de terceros.
  Es un dato obligatorio en caso de que el apoyo se establezca sobre las ventas
 
- * **Tipo cargos ventas** permite seleccionar si el apoyo es para todas las unidades entregadas de los productos establecidos en la tabla, solo para las ventas de promocion/regalo , ó solo para las unidades de cargo.
+ * **Tipo cargos ventas** permite seleccionar si el apoyo es para todas las unidades entregadas de los productos establecidos en la tabla, solo para las ventas de promoción/regalo , ó solo para las unidades de cargo.
 
 ## Configurar los clientes y productos afectados por la tabla
 
@@ -23,8 +23,8 @@ Podemos establecer distintas condiciones de apoyo, según nos indique el proveed
 
  * Apoyo fijo. Cuando el proveedor nos aporta un valor en euros/caja por cada uno del productos.
 
- * Margen garantizado. Cuando el proveedor nos garantiza un valor euros/caja minimo entre el precio de venta al cliente
- y el precio de compra del producto. Además, si indicamos el precio de venta nos permite establecer rangos de precios de venta desde para poder indicar un margen variable segun el precio final de venta del producto.
+ * Margen garantizado. Cuando el proveedor nos garantiza un valor euros/caja mínimo entre el precio de venta al cliente
+ y el precio de compra del producto. Además, si indicamos el precio de venta nos permite establecer rangos de precios de venta desde para poder indicar un margen variable según el precio final de venta del producto.
 
- * Descuentos sobrepasados. Nos permite establer un porcentaje de descuento a partir del cual una vez es superado el proveedor nos apoya con el diferencial del gasto superado.
+ * Descuentos sobrepasados. Nos permite establecer un porcentaje de descuento a partir del cual una vez es superado el proveedor nos apoya con el diferencial del gasto superado.
 

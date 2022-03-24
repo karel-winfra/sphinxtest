@@ -14,7 +14,7 @@
 ![](menu_favoritos_quitar.png)
 
 ```{note}
-Los favoritos pueden aparecer al final del menú principal o incluidos dentro de un submenú.
+Los favoritos pueden aparecer al final del menú principal o incluidos dentro de un submenu.
 ```
  La opción esta configurable en la pantalla [](../views/Ribera2.Shell.Views.ThemeConfigView).
  La misma pantalla permite también eliminar todos los favoritos a la vez.
